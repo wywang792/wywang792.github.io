@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>他日水云身</title>
+    <link rel="icon" href="/">
+    
+<link rel="stylesheet" href="/css/base.css">
+
+    
+<link rel="stylesheet" href="/css/widget.css">
+
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+    
+<link rel="stylesheet" href="/css/layout.css">
+
+    
+<link rel="stylesheet" href="/css/index.css">
+
+    
+<link rel="stylesheet" href="/css/article-info.css">
+
+    
+<link rel="stylesheet" href="/css/tag.css">
+
+    
+<link rel="stylesheet" href="/css/scroll.css">
+
+    
+<link rel="stylesheet" href="/css/animate.min.css">
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="header">
+    <div class="avatar-wrap">
+        <a href="/../index">
+            <img class="avatar" src="/images/avatar.jpg" alt="">
+        </a>
+    </div>
+    <div class="name-wrap">
+        <span class="name">水云身</span>
+    </div>
+</div>
+<div class="nav">
+    <ul>
+        
+            <li>
+                <a href="/">归档</a>
+            </li>
+        
+            <li>
+                <a href="/">分类</a>
+            </li>
+        
+            <li>
+                <a href="/">标签</a>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+    <div class="right">
+        <div style="margin: 20px">
+    <div class="article-info">
+        <div class="article-title">
+            <h2>git</h2>
+        </div>
+        <div class="article-entry">
+            <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看域名对应的IP</span></span><br><span class="line">nslookup github.com</span><br><span class="line">nslookup github.global.ssl.fastly.Net</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在C:\Windows\System32\drivers\etc\hosts文件中添加以下域名解析</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">添加后，在命令行执行 ipconfig /flushdns刷新域名解析</span></span><br><span class="line">140.82.113.3      github.com</span><br><span class="line">140.82.114.20     gist.github.com</span><br><span class="line">151.101.184.133    assets-cdn.github.com</span><br><span class="line">151.101.184.133    raw.githubusercontent.com</span><br><span class="line">151.101.184.133    gist.githubusercontent.com</span><br><span class="line">151.101.184.133    cloud.githubusercontent.com</span><br><span class="line">151.101.184.133    camo.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars0.githubusercontent.com</span><br><span class="line">199.232.68.133     avatars0.githubusercontent.com</span><br><span class="line">199.232.28.133     avatars1.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars1.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars2.githubusercontent.com</span><br><span class="line">199.232.28.133     avatars2.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars3.githubusercontent.com</span><br><span class="line">199.232.68.133     avatars3.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars4.githubusercontent.com</span><br><span class="line">199.232.68.133     avatars4.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars5.githubusercontent.com</span><br><span class="line">199.232.68.133     avatars5.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars6.githubusercontent.com</span><br><span class="line">199.232.68.133     avatars6.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars7.githubusercontent.com</span><br><span class="line">199.232.68.133     avatars7.githubusercontent.com</span><br><span class="line">151.101.184.133    avatars8.githubusercontent.com</span><br><span class="line">199.232.68.133     avatars8.githubusercontent.com</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h1 id="Git项目clone慢"><a href="#Git项目clone慢" class="headerlink" title="Git项目clone慢"></a>Git项目clone慢</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">比较大的项目，只克隆最后一次提交的，可以减少要<span class="built_in">clone</span>的文件</span></span><br><span class="line">git clone --depth=1 git地址</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">如果有科学上网，可以设置代理</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意git是没有https代理的，http包含了https，另外地址上不能加单引号</span></span><br><span class="line">git config --global http.proxy socks5://127.0.0.1:10808</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">取消代理</span></span><br><span class="line">git config --global --unset http.proxy</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看git的所有配置</span></span><br><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装Windows编译环境"><a href="#安装Windows编译环境" class="headerlink" title="安装Windows编译环境"></a>安装Windows编译环境</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install –global –production windows-build-tools</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+</body>
+</html>
