@@ -1,7 +1,7 @@
 .article-entry pre,
 .article-entry .highlight {
     margin: 10px 0;
-    padding: 10px 10px;
+    padding: 10px;
     overflow: hidden;
     overflow-x: auto;
     font-size: 14px;
@@ -10,6 +10,6 @@
     background: var(--bs-dark);
 }
 
-.article-entry pre code {
+.article-entry pre span {
     font-family: Menlo,Monaco,Andale Mono,lucida console,Courier New,monospace,"Microsoft YaHei";
 }
