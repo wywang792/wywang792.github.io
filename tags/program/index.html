@@ -10,6 +10,9 @@
 <link rel="stylesheet" href="/css/widget.css">
 
     
+<link rel="stylesheet" href="/css/calendar.css">
+
+    
 <link rel="stylesheet" href="/css/highlight.css">
 
     
@@ -20,6 +23,9 @@
 
     
 <link rel="stylesheet" href="/css/article-info.css">
+
+    
+<link rel="stylesheet" href="/css/category.css">
 
     
 <link rel="stylesheet" href="/css/tag.css">
@@ -61,7 +67,7 @@
             <div class="content-articles">
                 
                     <div class="article-info">
-    <a href="/2022/08/13/20220813-Hello-World/">
+    <a href="/2022/08/13/Hello%20World/">
         <div class="article-title">
             <h1>Hello World</h1>
         </div>
@@ -97,10 +103,22 @@
                 <div class="widget-title">
                     归档
                 </div>
+                <div>
+                    <div id="calendar"></div>
+                </div>
             </div>
             <div class="content-categories">
                 <div class="widget-title">
                     分类
+                </div>
+                <div>
+                    
+                        <a href="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" class="category">版本控制</a>
+                    
+                        <a href="/categories/nodejs/" class="category">NodeJs</a>
+                    
+                        <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/" class="category">编辑器</a>
+                    
                 </div>
             </div>
             <div class="content-tags">
@@ -115,15 +133,15 @@
                     
                         <a href="/tags/typore/" class="tag">typore</a>
                     
+                        <a href="/tags/hja/" class="tag">hja</a>
+                    
+                        <a href="/tags/jkh/" class="tag">jkh</a>
+                    
                         <a href="/tags/hello/" class="tag">hello</a>
                     
                         <a href="/tags/world/" class="tag">world</a>
                     
                         <a href="/tags/program/" class="tag">program</a>
-                    
-                        <a href="/tags/hja/" class="tag">hja</a>
-                    
-                        <a href="/tags/jkh/" class="tag">jkh</a>
                     
                         <a href="/tags/kkk/" class="tag">kkk</a>
                     
@@ -142,7 +160,17 @@
 <script src="/js/jquery.min.js"></script>
 
 
+<script src="/js/languages.js"></script>
+
+
+<script src="/js/calendar.js"></script>
+
+
 <script src="/js/index.js"></script>
 
+<script type="application/javascript">
+    $('#calendar').aCalendar('zh-CN',
+        $.extend());
+</script>
 </body>
 </html>

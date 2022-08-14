@@ -8,6 +8,10 @@
     background: var(--bs-dark);
 }
 
+.highlight {
+    border-radius: 4px;
+}
+
 .article-entry pre span {
     font-family: Menlo,Monaco,Andale Mono,lucida console,Courier New,monospace,"Microsoft YaHei";
 }
