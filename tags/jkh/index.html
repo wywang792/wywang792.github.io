@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="utf-8">
 <head>
     <meta charset="utf-8">
     <title>他日水云身</title>
@@ -11,9 +11,6 @@
 
     
 <link rel="stylesheet" href="/css/calendar.css">
-
-    
-<link rel="stylesheet" href="/css/highlight.css">
 
     
 <link rel="stylesheet" href="/css/layout.css">
@@ -35,6 +32,9 @@
 
     
 <link rel="stylesheet" href="/css/animate.min.css">
+
+    
+<link rel="stylesheet" href="/plugins/a11y-dark.css">
 
 <meta name="generator" content="Hexo 6.2.0"></head>
 <body>
@@ -75,17 +75,17 @@
     <div class="article-entry">
         
             <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
         
@@ -121,9 +121,9 @@
                 </div>
                 <div>
                     
-                        <a href="/categories/nodejs/" class="category">NodeJs</a>
-                    
                         <a href="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" class="category">版本控制</a>
+                    
+                        <a href="/categories/nodejs/" class="category">NodeJs</a>
                     
                         <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/" class="category">编辑器</a>
                     
@@ -135,11 +135,9 @@
                 </div>
                 <div>
                     
-                        <a href="/tags/node/" class="tag">node</a>
-                    
                         <a href="/tags/git/" class="tag">git</a>
                     
-                        <a href="/tags/typore/" class="tag">typore</a>
+                        <a href="/tags/node/" class="tag">node</a>
                     
                         <a href="/tags/hja/" class="tag">hja</a>
                     
@@ -150,6 +148,8 @@
                         <a href="/tags/world/" class="tag">world</a>
                     
                         <a href="/tags/program/" class="tag">program</a>
+                    
+                        <a href="/tags/typore/" class="tag">typore</a>
                     
                         <a href="/tags/kkk/" class="tag">kkk</a>
                     
@@ -176,9 +176,15 @@
 
 <script src="/js/index.js"></script>
 
+
+<script src="/plugins/highlight.min.js"></script>
+
 <script type="application/javascript">
     $('#calendar').aCalendar('zh-CN',
         $.extend());
+</script>
+<script>
+    hljs.highlightAll();
 </script>
 </body>
 </html>
