@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>nodejs环境搭建 | 小王编程进阶</title><meta name="author" content="小王编程进阶"><meta name="copyright" content="小王编程进阶"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、安装nvm在Web项目开发中，由于各种前端框架、插件 以及 Nodejs、Npm 的飞速更新，在开发新项目或对老项目进行更新维护时，有些项目版本的配置与当前Node、Npm环境不匹配，导致运行报错，甚至无法启动。 nvm 是 Node Version Manager 的缩写，是一个用于在同一台计算机上安装和管理多个 Node.js 版本的工具。它允许你轻松地在不同的项目中使用不同版本的 Nod">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs环境搭建">
+<meta property="og:url" content="http://wywang.site/posts/3f14f460/index.html">
+<meta property="og:site_name" content="小王编程进阶">
+<meta property="og:description" content="一、安装nvm在Web项目开发中，由于各种前端框架、插件 以及 Nodejs、Npm 的飞速更新，在开发新项目或对老项目进行更新维护时，有些项目版本的配置与当前Node、Npm环境不匹配，导致运行报错，甚至无法启动。 nvm 是 Node Version Manager 的缩写，是一个用于在同一台计算机上安装和管理多个 Node.js 版本的工具。它允许你轻松地在不同的项目中使用不同版本的 Nod">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://wywang.site/img/avatar.jpg">
+<meta property="article:published_time" content="2022-12-04T04:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-04T14:18:33.537Z">
+<meta property="article:author" content="小王编程进阶">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="nodejs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wywang.site/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://wywang.site/posts/3f14f460/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'nodejs环境搭建',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-04 22:18:33'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">50</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./img/index_top_img.png')"><nav id="nav"><span id="blog-info"><a href="/" title="小王编程进阶"><span class="site-name">小王编程进阶</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">nodejs环境搭建</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-04T04:00:00.000Z" title="发表于 2022-12-04 12:00:00">2022-12-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-04T14:18:33.537Z" title="更新于 2024-09-04 22:18:33">2024-09-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">环境搭建</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="nodejs环境搭建"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一、安装nvm"><a href="#一、安装nvm" class="headerlink" title="一、安装nvm"></a>一、安装nvm</h1><p>在Web项目开发中，由于各种前端框架、插件 以及 Nodejs、Npm 的飞速更新，在开发新项目或对老项目进行更新维护时，有些项目版本的配置与当前Node、Npm环境不匹配，导致运行报错，甚至无法启动。</p>
+<p>nvm 是 Node Version Manager 的缩写，是一个用于在同一台计算机上安装和管理多个 Node.js 版本的工具。它允许你轻松地在不同的项目中使用不同版本的 Node.js，而不必全局更改你的 Node.js 安装。</p>
+<h2 id="1、下载官方安装包进行安装"><a href="#1、下载官方安装包进行安装" class="headerlink" title="1、下载官方安装包进行安装"></a>1、下载官方安装包进行安装</h2><p>下载地址：<a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
+<p>windows系统下，下载nvm-setup.exe即可</p>
+<p>进入安装界面后，分别选择nvm安装路径及nodejs安装路径</p>
+<p>这里的nodejs安装路径的选择，实际上会生成一个快捷方式的链接，真实的nodejs仍然会被下载在nvm的安装路径中，这是为了日后在切换node版本时，nvm只需要改变该快捷方式的链接路径，而无需修改其他任何东西</p>
+<p>本人选择的安装路径：<br>nvm路径：D:\Language\Nvm<br>node路径：D:\Language\nodejs</p>
+<h2 id="2、配置nvm环境变量"><a href="#2、配置nvm环境变量" class="headerlink" title="2、配置nvm环境变量"></a>2、配置nvm环境变量</h2><p>安装nvm时，会自动配置环境变量，检查如果未配置，则手动进行配置<br>windows系统下，在系统变量中添加：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">NVM_HOME:</span><br><span class="line">D:\Language\Nvm</span><br><span class="line"></span><br><span class="line">NVM_SYMLINK:</span><br><span class="line">D:\Language\nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># NVM_HOME值为nvm的安装路径</span></span><br><span class="line"><span class="comment"># NVM_SYMLINK值为nvm指定的nodejs的安装路径</span></span><br><span class="line"><span class="comment"># 注意path变量中添加%NVM_HOME%和%NVM_SYMLINK%时需要按顺序</span></span><br></pre></td></tr></table></figure>
+
+<p>在path中添加如下路径：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%NVM_HOME%</span><br><span class="line">%NVM_SYMLINK%</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、配置下载镜像地址"><a href="#3、配置下载镜像地址" class="headerlink" title="3、配置下载镜像地址"></a>3、配置下载镜像地址</h2><p>由于默认的镜像地址为registry.npmjs.org是外网的，下载node安装包及依赖包非常慢，所以我们把镜像配置成国内的，加快下载速度。<br>在nvm安装路径中找到setting.txt配置文件，添加node_mirror、npm_mirror：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node_mirror: https://npmmirror.com/mirrors/node/</span><br><span class="line">npm_mirror: https://npmmirror.com/mirrors/npm/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 当安装低版本的node时，同步安装的npm版本有可能在指定的setting配置的源中找不到。例如我当前配置的npm下载镜像是淘宝镜像。当我下载8.0.0指定的低版本node时，npm下载失败。此时，必须去掉setting里配置的镜像，让它去默认的源下载</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4、nvm的相关命令："><a href="#4、nvm的相关命令：" class="headerlink" title="4、nvm的相关命令："></a>4、nvm的相关命令：</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启nodejs版本管理，第一次使用nvm时，执行该命令</span></span><br><span class="line">nvm on</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看nvm版本</span></span><br><span class="line">nvm version</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出所有可下载的node版本</span></span><br><span class="line">nvm <span class="built_in">ls</span> available</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载指定node版本</span></span><br><span class="line">nvm install node版本号</span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载指定node版本</span></span><br><span class="line">nvm uninstall node版本号</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看已下载的node版本</span></span><br><span class="line">nvm <span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换node版本</span></span><br><span class="line">nvm use node版本号</span><br></pre></td></tr></table></figure>
+<h1 id="二、安装nodejs"><a href="#二、安装nodejs" class="headerlink" title="二、安装nodejs"></a>二、安装nodejs</h1><h2 id="1、安装nodejs"><a href="#1、安装nodejs" class="headerlink" title="1、安装nodejs"></a>1、安装nodejs</h2><p>已经安装了nvm的，可以通过nvm直接安装node</p>
+<p>未安装nvm的，可通过nodejs官网下载安装包，然后进行安装</p>
+<p>安装成功后，可使用以下命令进行验证</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node <span class="literal">-v</span></span><br><span class="line"><span class="comment"># 可正确输出安装路径即说明安装成功</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2、配置环境node环境变量"><a href="#2、配置环境node环境变量" class="headerlink" title="2、配置环境node环境变量"></a>2、配置环境node环境变量</h2><p>如果使用了nvm，则已经完成了环境变量的配置</p>
+<p>如果只使用了nodejs，则需要单独配置环境变量</p>
+<h2 id="3、npm介绍"><a href="#3、npm介绍" class="headerlink" title="3、npm介绍"></a>3、npm介绍</h2><p>npm的全称是Node Package Manager，是一个NodeJS包管理和分发工具，方便开发者们引用其他开发者上传的开源工具包，类似Linux下的yum，Java下的Maven。</p>
+<p>在安装node时，会自动安装对应版本的npm，比如本人安装了16.12.0版本的nodejs，自动安装了对应的8.1.0版本的npm。</p>
+<h2 id="4、npm配置"><a href="#4、npm配置" class="headerlink" title="4、npm配置"></a>4、npm配置</h2><p>有了npm后，我们可以使用npm安装和卸载其他JS工具包。</p>
+<p>需要注意的是，npm安装的包可分为全局包和局部包：</p>
+<p><strong>全局包：</strong>安装在默认的全局路径下，可在当前操作系统任意路径下使用；</p>
+<p><strong>局部包：</strong>只会安装在当前执行安装命令的目录的node_modules路径下，只能在当前路径及当前路径的下级路径下使用；</p>
+<p>这里涉及到了全局包的安装路径，可通过以下命令查看：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get prefix</span><br><span class="line"><span class="comment"># 默认安装路径为C:\用户\用户名\AppData\Roming\npm</span></span><br></pre></td></tr></table></figure>
+
+<p>这种默认的路径，在使用nvm时，会导致不同版本的nodejs，npm安装各种不同版本的全局包到默认全局路径下，可能会出现各种各样的问题，因为我自己使用了nvm，所以这里修改了默认全局安装路径。</p>
+<p>另外，缓存也是同样的问题，npm缓存是指npm在本地存储下载的软件包和依赖项的地方。当使用npm安装软件包时，它会首先检查本地缓存中是否有该软件包的副本。如果有，它将从缓存中获取软件包而不是从远程服务器下载。所以，缓存路径也同样需要修改</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在要配置的路径下创建文件夹，一般使用node_global，node_cache</span></span><br><span class="line"><span class="comment"># 本人的路径配置在D:\Language\NodeJs下，因为使用了nvm，这里的D:\Language\NodeJs实际是一个快捷方式，指向的是D:\Language\Nvm\当前使用的node版本号，这样，切换不同版本的nodejs时，全局路径及缓存路径也会相应改变</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改全局路径</span></span><br><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;D:\Language\NodeJs\node_global&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改缓存路径</span></span><br><span class="line">npm config <span class="built_in">set</span> cache <span class="string">&quot;D:\Language\NodeJs\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>修改全局路径后，为了让全局安装的包的命令可在全局路径下执行，需要配置对应的环境变量</p>
+<p>在path中新增：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%NVM_SYMLINK%\node_global</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这是使用了nvm后配置的路径</span></span><br><span class="line"><span class="comment"># 如果是直接安装的nodejs，则添加对应的全局安装路径即可</span></span><br></pre></td></tr></table></figure>
+
+<p>除此之外，还有设置下载地址的配置需要修改，默认的下载地址为registry.npmjs.org，该地址为外网的，网速较慢，可设置为国内的镜像地址</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry <span class="string">&quot;https://registry.npmmirror.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 淘宝镜像源：https://registry.npmmirror.com、https://registry.npm.taobao.org</span></span><br><span class="line"><span class="comment"># 腾讯镜像源：http://mirrors.cloud.tencent.com/npm/</span></span><br><span class="line"><span class="comment"># 华为镜像源：https://mirrors.huaweicloud.com/repository/npm/</span></span><br><span class="line"><span class="comment"># 官方默认镜像源：https://registry.npmjs.org</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5、npm的相关命令"><a href="#5、npm的相关命令" class="headerlink" title="5、npm的相关命令"></a>5、npm的相关命令</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">-g</span>： <span class="comment"># --global 的缩写，表示安装到全局目录里</span></span><br><span class="line"><span class="literal">-S</span>： <span class="comment"># --save 的缩写，表示安装的包将写入package.json里面的dependencies</span></span><br><span class="line"><span class="literal">-D</span>： <span class="comment"># --save-dev 的缩写，表示将安装的包将写入packege.json里面的devDependencies</span></span><br><span class="line"> i： <span class="comment"># install的缩写，表示安装</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#查看版本号</span></span><br><span class="line">npm <span class="literal">-v</span>   </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">npm config list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 升级npm</span></span><br><span class="line">npm install <span class="literal">-g</span> npm@<span class="number">9.8</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 清除npm的缓存</span></span><br><span class="line">npm cache clean</span><br><span class="line"></span><br><span class="line"><span class="comment"># 会安装到配置的全局目录下</span></span><br><span class="line">npm i express <span class="literal">-g</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包信息将加入到dependencies生产依赖</span></span><br><span class="line">npm i express <span class="literal">-S</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装包信息将加入到devDependencies开发依赖</span></span><br><span class="line">npm i express <span class="literal">-D</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载模块，但不卸载模块留在package.json中的对应信息</span></span><br><span class="line">npm uninstall express </span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载全局模块</span></span><br><span class="line">npm uninstall express <span class="literal">-g</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载模块，同时卸载留在package.json中dependencies下的信息</span></span><br><span class="line">npm uninstall express <span class="literal">--save</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 卸载模块，同时卸载留在package.json中devDependencies下的信息</span></span><br><span class="line">npm uninstall express <span class="literal">--save-dev</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 以临时源全局安装指定版本</span></span><br><span class="line">npm install <span class="literal">-g</span> express@<span class="number">2.5</span>.<span class="number">8</span> <span class="literal">--registry</span>=https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新最新版本的express</span></span><br><span class="line">npm update express  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新到指定版本号的express</span></span><br><span class="line">npm update express@<span class="number">2.1</span>.<span class="number">0</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新到最后的新版本</span></span><br><span class="line">npm update express@latest</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看某个包对于各种包的依赖关系</span></span><br><span class="line">npm view express dependencies</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看express最新的版本号</span></span><br><span class="line">npm view express version  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看所有express历史版本号（很实用）</span></span><br><span class="line">npm view express versions </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看最新的express版本的信息</span></span><br><span class="line">npm view express  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看express的详细信息，等同于上面的npm view express</span></span><br><span class="line">npm info express  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看本地已安装的express的详细信息</span></span><br><span class="line">npm list express 或 npm <span class="built_in">ls</span> express  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看express包的来源地址</span></span><br><span class="line">npm view express repository.url    </span><br><span class="line"></span><br><span class="line"><span class="comment"># 清除项目中没有被使用的包</span></span><br><span class="line">npm prune  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查模块是否已经过时</span></span><br><span class="line">npm outdated  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查模块是否已经过时</span></span><br><span class="line">npm outdated </span><br><span class="line"></span><br><span class="line"><span class="comment"># 会打开默认浏览器跳转到github中express的页面</span></span><br><span class="line">npm repo express  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 会打开默认浏览器跳转到github中express的README.MD文件信息</span></span><br><span class="line">npm docs express </span><br><span class="line"></span><br><span class="line"><span class="comment"># 会打开默认浏览器跳转到github中express的主页</span></span><br><span class="line">npm home express  </span><br><span class="line"></span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://wywang.site">小王编程进阶</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wywang.site/posts/3f14f460/">http://wywang.site/posts/3f14f460/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://wywang.site" target="_blank">小王编程进阶</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/web/">web</a><a class="post-meta__tags" href="/tags/javascript/">javascript</a><a class="post-meta__tags" href="/tags/nodejs/">nodejs</a></div><div class="post_share"><div class="social-share" data-image="/./img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/8d194d53/" title="node-sass安装问题处理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">node-sass安装问题处理</div></div></a></div><div class="next-post pull-right"><a href="/posts/91c4f57f/" title="windows11偏好配置"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">windows11偏好配置</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/f55dc13/" title="javascript中的各位置属性详解"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-22</div><div class="title">javascript中的各位置属性详解</div></div></a></div><div><a href="/posts/7e17d776/" title="渡一之事件循环"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-22</div><div class="title">渡一之事件循环</div></div></a></div><div><a href="/posts/8d194d53/" title="node-sass安装问题处理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-06</div><div class="title">node-sass安装问题处理</div></div></a></div><div><a href="/posts/3a983c7a/" title="key&#x3D;”Math.random()“问题处理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-10</div><div class="title">key&#x3D;”Math.random()“问题处理</div></div></a></div><div><a href="/posts/49d9275e/" title="element-ui中input回车触发页面刷新问题及其解决方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-28</div><div class="title">element-ui中input回车触发页面刷新问题及其解决方法</div></div></a></div><div><a href="/posts/d5d15103/" title="el-select下拉选项设置为表格"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-11</div><div class="title">el-select下拉选项设置为表格</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小王编程进阶</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">50</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/wywang792"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这里是小王编程进阶，记录自己日常工作中遇到的问题，同时也作为自己的学习笔记，欢迎关注，一起进步！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85nvm"><span class="toc-text">一、安装nvm</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%B8%8B%E8%BD%BD%E5%AE%98%E6%96%B9%E5%AE%89%E8%A3%85%E5%8C%85%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85"><span class="toc-text">1、下载官方安装包进行安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AEnvm%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">2、配置nvm环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F%E5%9C%B0%E5%9D%80"><span class="toc-text">3、配置下载镜像地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81nvm%E7%9A%84%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-text">4、nvm的相关命令：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85nodejs"><span class="toc-text">二、安装nodejs</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85nodejs"><span class="toc-text">1、安装nodejs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83node%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">2、配置环境node环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81npm%E4%BB%8B%E7%BB%8D"><span class="toc-text">3、npm介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81npm%E9%85%8D%E7%BD%AE"><span class="toc-text">4、npm配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81npm%E7%9A%84%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">5、npm的相关命令</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/368e27d4/" title="websocket网络通信">websocket网络通信</a><time datetime="2024-03-10T16:00:00.000Z" title="发表于 2024-03-11 00:00:00">2024-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4a0d6d40/" title="socket网络通信">socket网络通信</a><time datetime="2024-03-09T16:00:00.000Z" title="发表于 2024-03-10 00:00:00">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/2c289212/" title="渡一之浏览器是如何渲染页面的">渡一之浏览器是如何渲染页面的</a><time datetime="2023-12-22T19:00:00.000Z" title="发表于 2023-12-23 03:00:00">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/7e17d776/" title="渡一之你不知道的CSS之包含块">渡一之你不知道的CSS之包含块</a><time datetime="2023-12-22T17:00:00.000Z" title="发表于 2023-12-23 01:00:00">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4171ab52/" title="渡一之CSS属性计算过程">渡一之CSS属性计算过程</a><time datetime="2023-12-22T16:00:00.000Z" title="发表于 2023-12-23 00:00:00">2023-12-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright"><a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2021001261号-2</a></div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
