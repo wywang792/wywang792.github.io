@@ -1,0 +1,599 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Js基础(六)-标准库 | 小王编程进阶</title><meta name="author" content="小王编程进阶"><meta name="copyright" content="小王编程进阶"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="标准库包装类如果尝试着把原始类型（number、string、boolean）当做对象使用，JS会自动将其转换为对应包装类的实例 Numberhttps:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web&#x2F;JavaScript&#x2F;Reference&#x2F;Global_Objects&#x2F;Number    API 含义 备注    Number.NaN 表示一个数学上并不存在的数字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Js基础(六)-标准库">
+<meta property="og:url" content="http://wywang.site/posts/7db5d32e/index.html">
+<meta property="og:site_name" content="小王编程进阶">
+<meta property="og:description" content="标准库包装类如果尝试着把原始类型（number、string、boolean）当做对象使用，JS会自动将其转换为对应包装类的实例 Numberhttps:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web&#x2F;JavaScript&#x2F;Reference&#x2F;Global_Objects&#x2F;Number    API 含义 备注    Number.NaN 表示一个数学上并不存在的数字">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://wywang.site/img/avatar.jpg">
+<meta property="article:published_time" content="2023-05-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-19T07:44:58.245Z">
+<meta property="article:author" content="小王编程进阶">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wywang.site/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://wywang.site/posts/7db5d32e/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Js基础(六)-标准库',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-19 15:44:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./img/index_top_img.png')"><nav id="nav"><span id="blog-info"><a href="/" title="小王编程进阶"><span class="site-name">小王编程进阶</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Js基础(六)-标准库</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-27T16:00:00.000Z" title="发表于 2023-05-28 00:00:00">2023-05-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-19T07:44:58.245Z" title="更新于 2024-09-19 15:44:58">2024-09-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Js基础(六)-标准库"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h1><h2 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h2><p>如果尝试着把原始类型（number、string、boolean）当做对象使用，JS会自动将其转换为对应包装类的实例</p>
+<h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number</a></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN">Number.NaN</a></td>
+<td>表示一个数学上并不存在的数字</td>
+<td>可以直接书写为<code>NaN</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN">Number.isNaN()</a></td>
+<td>判断传入的值是否是NaN</td>
+<td>可以直接书写为<code>isNaN</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger">Number.isInteger()</a></td>
+<td>判断传入的值是否是整数</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt">Number.parseInt()</a></td>
+<td>把传入的值转换为整数形式返回</td>
+<td>可以直接书写为<code>parseInt()</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat">Number.parseFloat()</a></td>
+<td>把传入的值转换为小数形式返回</td>
+<td>可以直接书写为<code>parseFloat()</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">Number.prototype.toFixed()</a></td>
+<td>将当前数字保留指定位数的小数返回</td>
+<td>传入小数位数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/tostring">Number.prototype.toString()</a></td>
+<td>将当前数字转换为字符串返回</td>
+<td>传入进制2-36</td>
+</tr>
+</tbody></table>
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String</a></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode">String.fromCharCode()</a></td>
+<td>根据编码值得到一个字符</td>
+<td>传入一个或多个编码值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length">String.prototype.length</a></td>
+<td>得到字符串的长度</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt">String.prototype.charCodeAt()</a></td>
+<td>得到某个下标的字符编码</td>
+<td>传入下标</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes">String.prototype.includes()</a></td>
+<td>判断当前字符串是否包含某个子串</td>
+<td>传入子串</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">String.prototype.indexOf()</a></td>
+<td>判断某个字符串在当前字符串中的第一个下标位置</td>
+<td>如果没有，返回-1</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf">String.prototype.lastIndexOf()</a></td>
+<td>判断某个字符串在当前字符串中的最后一个下标位置</td>
+<td>如果没有，返回-1</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith">String.prototype.endsWith()</a></td>
+<td>判断某个字符串是否以指定的字符串结束</td>
+<td>传入一个字符串</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith">String.prototype.startsWith()</a></td>
+<td>判断某个字符串是否以指定的字符串开始</td>
+<td>传入一个字符串</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padStart">String.prototype.padStart()</a></td>
+<td>将当前的字符串按照指定的字符在字符串开始位置填充到指定的位数，返回填充后的字符串</td>
+<td>传入位数、填充字符</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd">String.prototype.padEnd()</a></td>
+<td>将当前的字符串按照指定的字符在字符串结束位置填充到指定的位数，返回填充后的字符串</td>
+<td>传入位数、填充字符</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.prototype.split()</a></td>
+<td>把当前字符串按照某个字符串分割成一个字符串数组返回</td>
+<td>传入分隔符</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">String.prototype.substring()</a></td>
+<td>返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集</td>
+<td>传入开始字符、结束字符</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim">String.prototype.trim()</a></td>
+<td>从字符串的两端删除空白字符，返回新字符串</td>
+<td>无参数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart">String.prototype.trimStart()</a></td>
+<td>从字符串的开头删除空白字符，返回新字符串</td>
+<td>无参数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">String.prototype.trimEnd()</a></td>
+<td>从字符串的末端删除空白字符，返回新字符串</td>
+<td>无参数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">String.prototype.toUpperCase()</a></td>
+<td>将调用该方法的字符串转为大写形式并返回</td>
+<td>无参数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">String.prototype.toLowerCase()</a></td>
+<td>将调用该方法的字符串转为小写形式并返回</td>
+<td>无参数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace()</a></td>
+<td>替换字符串中的第一个对应字符为新字符</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replaceall">String.prototype.replaceAll()</a></td>
+<td>替换字符串中的所有对应字符为新字符</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math</a></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI">Math.PI</a></td>
+<td>得到圆周率π</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/abs">Math.abs()</a></td>
+<td>求某个数绝对值</td>
+<td>传入一个数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">Math.ceil()</a></td>
+<td>向上取整</td>
+<td>传入一个数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></td>
+<td>向下取整</td>
+<td>传入一个数</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/max">Math.max()</a></td>
+<td>求一个数列中的最大值</td>
+<td>把数列依次传入</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min()</a></td>
+<td>求一个数列中的最小值</td>
+<td>把数列依次传入</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a></td>
+<td>得到一个0-1之间的随机小数</td>
+<td>无参；无法取到1</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round()</a></td>
+<td>返回四舍五入的结果</td>
+<td>传入一个数</td>
+</tr>
+</tbody></table>
+<h2 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h2><h3 id="时间基础知识"><a href="#时间基础知识" class="headerlink" title="时间基础知识"></a>时间基础知识</h3><h4 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h4><table>
+<thead>
+<tr>
+<th>单位</th>
+<th>名称</th>
+<th>换算</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hour</td>
+<td>小时</td>
+<td>1 day &#x3D; 24 hours</td>
+</tr>
+<tr>
+<td>minute</td>
+<td>分钟</td>
+<td>1 hour &#x3D; 60 minutes</td>
+</tr>
+<tr>
+<td>second</td>
+<td>秒</td>
+<td>1 minute &#x3D; 60 seconds</td>
+</tr>
+<tr>
+<td>millisecond （ms）</td>
+<td>毫秒</td>
+<td>1 second &#x3D; 1000 ms</td>
+</tr>
+<tr>
+<td>nanosecond （ns）</td>
+<td>纳秒</td>
+<td>1 ms &#x3D; 1000 ns</td>
+</tr>
+</tbody></table>
+<h4 id="GMT和UTC"><a href="#GMT和UTC" class="headerlink" title="GMT和UTC"></a>GMT和UTC</h4><p>世界划分为24个时区，北京在东8区，格林威治在0时区。</p>
+<img src="./assets/Js基础(六)-标准库/2019-07-02-11-14-46.png" alt="2019-07-02-11-14-46" style="zoom:50%;" />
+
+<p><strong>GMT</strong>：Greenwish Mean Time 格林威治世界时。太阳时，精确到毫秒。</p>
+<p><strong>UTC</strong>：Universal Time Coodinated 世界协调时。以原子时间为计时标准，精确到纳秒。</p>
+<blockquote>
+<p>国际标准中，已全面使用UTC时间，而不再使用GMT时间，但是由于历史习惯问题，仍然将UTC写作GMT</p>
+</blockquote>
+<p>GMT和UTC时间在文本表示格式上是一致的，均为<code>星期缩写, 日期 月份 年份 时间 GMT</code>，例如：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Thu</span>, <span class="number">27</span> Aug <span class="number">2020</span> <span class="number">08</span>:<span class="number">01</span>:<span class="number">44</span> GMT</span><br></pre></td></tr></table></figure>
+
+<p>另外，ISO 8601标准规定，建议使用以下方式表示时间：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">YYYY</span>-<span class="variable constant_">MM</span>-<span class="variable constant_">DDTHH</span><span class="symbol">:mm</span><span class="symbol">:ss</span>.msZ</span><br><span class="line">例如：</span><br><span class="line"><span class="number">2020</span>-08-27<span class="symbol">T08:</span><span class="number">01</span><span class="symbol">:</span><span class="number">44</span>.000Z</span><br></pre></td></tr></table></figure>
+
+<p><strong>GMT、UTC、ISO 8601都表示的是零时区的时间</strong></p>
+<h4 id="Unix-时间戳"><a href="#Unix-时间戳" class="headerlink" title="Unix 时间戳"></a>Unix 时间戳</h4><blockquote>
+<p>Unix 时间戳（Unix Timestamp）是Unix系统最早提出的概念</p>
+</blockquote>
+<p>它将UTC时间1970年1月1日凌晨作为起始时间，到指定时间经过的秒数（毫秒数）</p>
+<h4 id="程序中的时间处理"><a href="#程序中的时间处理" class="headerlink" title="程序中的时间处理"></a>程序中的时间处理</h4><p><strong>程序对时间的计算、存储务必使用UTC时间，或者时间戳</strong></p>
+<p><strong>在和用户交互时，将UTC时间或时间戳转换为更加友好的文本</strong></p>
+<img src="./assets/Js基础(六)-标准库/20200827163636.png" alt="img" style="zoom:50%;" />
+
+<h3 id="日期API"><a href="#日期API" class="headerlink" title="日期API"></a>日期API</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date</a></p>
+<p>构造函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(); <span class="comment">// 得到一个当前日期对象</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(value); <span class="comment">// 根据时间戳得到一个日期对象</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(dateString); <span class="comment">// 根据一个标准日期字符串得到一个日期对象</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]]]]]); <span class="comment">// 根据年、月、日、小时、分钟、秒、毫秒得到一个日期对象</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></td>
+<td>得到当前时间戳</td>
+<td>无参</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear">Date.prototype.getFullYear()</a></td>
+<td>得到年</td>
+<td>无参；本地时间；</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth">Date.prototype.getMonth()</a></td>
+<td>得到月</td>
+<td>无参；本地时间；范围0-11</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate">Date.prototype.getDate()</a></td>
+<td>得到日</td>
+<td>无参；本地时间；</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours">Date.prototype.getHours()</a></td>
+<td>得到小时</td>
+<td>无参；本地时间；</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes">Date.prototype.getMinutes()</a></td>
+<td>得到分钟</td>
+<td>无参；本地时间；</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds">Date.prototype.getSeconds()</a></td>
+<td>得到秒</td>
+<td>无参；本地时间；</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds">Date.prototype.getMilliseconds()</a></td>
+<td>得到毫秒</td>
+<td>无参；本地时间；</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString">Date.prototype.toLocaleString()</a></td>
+<td>得到日期本地的表示方式</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object</a></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign()</a></td>
+<td>将多个对象的属性混合到一起</td>
+<td>后面覆盖前面</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf()</a></td>
+<td>获取一个对象的隐式原型</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf">Object.setPrototypeOf()</a></td>
+<td>设置一个对象的隐式原型</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></td>
+<td>创建一个新对象，同时设置新对象的隐式原型</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array</a></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat">Array.prototype.concat()</a></td>
+<td>把多个数组拼接成一个</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Array.prototype.includes()</a></td>
+<td>判断数组中是否包含某个值</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">Array.prototype.indexOf()</a></td>
+<td>得到数组中某个值的第一个下标</td>
+<td>若不存在则返回-1</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf">Array.prototype.lastIndexOf()</a></td>
+<td>得到数组中某个值的最后一个下标</td>
+<td>若不存在则返回-1</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.prototype.join()</a></td>
+<td>把数组中每一项使用某个字符连接起来，形成一个字符串返回</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array.prototype.push()</a></td>
+<td>向数组的末尾添加一项</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift">Array.prototype.unshift()</a></td>
+<td>向数组的开头添加一项</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">Array.prototype.pop()</a></td>
+<td>删除数组最后一项</td>
+<td>返回被删除的值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">Array.prototype.shift()</a></td>
+<td>删除数组第一项</td>
+<td>返回被删除的值</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Array.prototype.splice()</a></td>
+<td>删除、修改、插入任何位置的值</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">Array.prototype.reverse()</a></td>
+<td>将数组中的元素顺序颠倒</td>
+<td></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Array.prototype.sort()</a></td>
+<td>对数组进行排序</td>
+<td>传入比较函数：0-位置不变，&lt;0-前者在前，&gt;0-前者在后</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice()</a></td>
+<td>对数组进行切割</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function</a></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">Function.prototype.apply()</a></td>
+<td>执行函数，绑定this</td>
+<td>参数列表以数组的形式传递</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call">Function.prototype.call()</a></td>
+<td>执行函数，绑定this</td>
+<td>参数列表依次传递</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://wywang.site">小王编程进阶</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wywang.site/posts/7db5d32e/">http://wywang.site/posts/7db5d32e/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://wywang.site" target="_blank">小王编程进阶</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/javascript/">javascript</a></div><div class="post_share"><div class="social-share" data-image="/./img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/4edc021/" title="webpack原理及基础配置"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">webpack原理及基础配置</div></div></a></div><div class="next-post pull-right"><a href="/posts/59df9dcb/" title="Js基础(二)-数据和数据类型"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Js基础(二)-数据和数据类型</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/59df9dcb/" title="Js基础(二)-数据和数据类型"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-08</div><div class="title">Js基础(二)-数据和数据类型</div></div></a></div><div><a href="/posts/294efb28/" title="Js兼容性(一)-babel的安装和使用"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-25</div><div class="title">Js兼容性(一)-babel的安装和使用</div></div></a></div><div><a href="/posts/32dad9ce/" title="Js兼容性(二)-babel预设"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-28</div><div class="title">Js兼容性(二)-babel预设</div></div></a></div><div><a href="/posts/93fec053/" title="Js兼容性(三)-babel插件"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-08-26</div><div class="title">Js兼容性(三)-babel插件</div></div></a></div><div><a href="/posts/d9a194fb/" title="Js兼容性(四)-在webpack中使用babel"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-08</div><div class="title">Js兼容性(四)-在webpack中使用babel</div></div></a></div><div><a href="/posts/6818cd3c/" title="Js基础(一)-什么是JavaScript"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-05</div><div class="title">Js基础(一)-什么是JavaScript</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小王编程进阶</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/wywang792"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这里是小王编程进阶，记录自己日常工作中遇到的问题，同时也作为自己的学习笔记，欢迎关注，一起进步！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%BA%93"><span class="toc-text">标准库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-text">包装类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Number"><span class="toc-text">Number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String"><span class="toc-text">String</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6"><span class="toc-text">数学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F"><span class="toc-text">日期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">时间基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%BD%8D"><span class="toc-text">单位</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GMT%E5%92%8CUTC"><span class="toc-text">GMT和UTC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unix-%E6%97%B6%E9%97%B4%E6%88%B3"><span class="toc-text">Unix 时间戳</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86"><span class="toc-text">程序中的时间处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E6%9C%9FAPI"><span class="toc-text">日期API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-text">对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-text">函数</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/368e27d4/" title="websocket网络通信">websocket网络通信</a><time datetime="2024-03-10T16:00:00.000Z" title="发表于 2024-03-11 00:00:00">2024-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4a0d6d40/" title="socket网络通信">socket网络通信</a><time datetime="2024-03-09T16:00:00.000Z" title="发表于 2024-03-10 00:00:00">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/2c289212/" title="前端进阶之浏览器是如何渲染页面的">前端进阶之浏览器是如何渲染页面的</a><time datetime="2023-12-22T19:00:00.000Z" title="发表于 2023-12-23 03:00:00">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/7e17d776/" title="前端进阶之你不知道的CSS之包含块">前端进阶之你不知道的CSS之包含块</a><time datetime="2023-12-22T17:00:00.000Z" title="发表于 2023-12-23 01:00:00">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4171ab52/" title="前端进阶之CSS属性计算过程">前端进阶之CSS属性计算过程</a><time datetime="2023-12-22T16:00:00.000Z" title="发表于 2023-12-23 00:00:00">2023-12-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright"><a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2021001261号-2</a></div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

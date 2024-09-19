@@ -58,7 +58,7 @@
     
     
     <entry>
-      <title>渡一之浏览器是如何渲染页面的</title>
+      <title>前端进阶之浏览器是如何渲染页面的</title>
       <link href="/posts/2c289212/"/>
       <url>/posts/2c289212/</url>
       
@@ -67,18 +67,14 @@
       
       <categories>
           
-          <category> 学习课件 </category>
+          <category> 前端开发 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> web </tag>
-            
-            <tag> 渡一教育 </tag>
-            
-            <tag> 浏览器 </tag>
+            <tag> javascript </tag>
             
         </tags>
       
@@ -87,7 +83,7 @@
     
     
     <entry>
-      <title>渡一之你不知道的CSS之包含块</title>
+      <title>前端进阶之你不知道的CSS之包含块</title>
       <link href="/posts/7e17d776/"/>
       <url>/posts/7e17d776/</url>
       
@@ -96,7 +92,7 @@
       
       <categories>
           
-          <category> 学习课件 </category>
+          <category> 前端开发 </category>
           
       </categories>
       
@@ -105,10 +101,6 @@
             
             <tag> CSS </tag>
             
-            <tag> web </tag>
-            
-            <tag> 渡一教育 </tag>
-            
         </tags>
       
     </entry>
@@ -116,7 +108,7 @@
     
     
     <entry>
-      <title>渡一之CSS属性计算过程</title>
+      <title>前端进阶之CSS属性计算过程</title>
       <link href="/posts/4171ab52/"/>
       <url>/posts/4171ab52/</url>
       
@@ -125,7 +117,7 @@
       
       <categories>
           
-          <category> 学习课件 </category>
+          <category> 前端开发 </category>
           
       </categories>
       
@@ -134,10 +126,6 @@
             
             <tag> CSS </tag>
             
-            <tag> web </tag>
-            
-            <tag> 渡一教育 </tag>
-            
         </tags>
       
     </entry>
@@ -145,7 +133,7 @@
     
     
     <entry>
-      <title>渡一之事件循环</title>
+      <title>前端进阶-之事件循环</title>
       <link href="/posts/7e17d776/"/>
       <url>/posts/7e17d776/</url>
       
@@ -154,18 +142,14 @@
       
       <categories>
           
-          <category> 学习课件 </category>
+          <category> 前端开发 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> web </tag>
-            
-            <tag> 渡一教育 </tag>
-            
-            <tag> 浏览器 </tag>
+            <tag> javascript </tag>
             
         </tags>
       
@@ -984,6 +968,106 @@
     
     
     <entry>
+      <title>Js基础(六)-标准库</title>
+      <link href="/posts/7db5d32e/"/>
+      <url>/posts/7db5d32e/</url>
+      
+        <content type="html"><![CDATA[<h1 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h1><h2 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h2><p>如果尝试着把原始类型（number、string、boolean）当做对象使用，JS会自动将其转换为对应包装类的实例</p><h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number</a></p><table><thead><tr><th>API</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN">Number.NaN</a></td><td>表示一个数学上并不存在的数字</td><td>可以直接书写为<code>NaN</code></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN">Number.isNaN()</a></td><td>判断传入的值是否是NaN</td><td>可以直接书写为<code>isNaN</code></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger">Number.isInteger()</a></td><td>判断传入的值是否是整数</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt">Number.parseInt()</a></td><td>把传入的值转换为整数形式返回</td><td>可以直接书写为<code>parseInt()</code></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat">Number.parseFloat()</a></td><td>把传入的值转换为小数形式返回</td><td>可以直接书写为<code>parseFloat()</code></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">Number.prototype.toFixed()</a></td><td>将当前数字保留指定位数的小数返回</td><td>传入小数位数</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/tostring">Number.prototype.toString()</a></td><td>将当前数字转换为字符串返回</td><td>传入进制2-36</td></tr></tbody></table><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String</a></p><table><thead><tr><th>API</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode">String.fromCharCode()</a></td><td>根据编码值得到一个字符</td><td>传入一个或多个编码值</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length">String.prototype.length</a></td><td>得到字符串的长度</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt">String.prototype.charCodeAt()</a></td><td>得到某个下标的字符编码</td><td>传入下标</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes">String.prototype.includes()</a></td><td>判断当前字符串是否包含某个子串</td><td>传入子串</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">String.prototype.indexOf()</a></td><td>判断某个字符串在当前字符串中的第一个下标位置</td><td>如果没有，返回-1</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf">String.prototype.lastIndexOf()</a></td><td>判断某个字符串在当前字符串中的最后一个下标位置</td><td>如果没有，返回-1</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith">String.prototype.endsWith()</a></td><td>判断某个字符串是否以指定的字符串结束</td><td>传入一个字符串</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith">String.prototype.startsWith()</a></td><td>判断某个字符串是否以指定的字符串开始</td><td>传入一个字符串</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padStart">String.prototype.padStart()</a></td><td>将当前的字符串按照指定的字符在字符串开始位置填充到指定的位数，返回填充后的字符串</td><td>传入位数、填充字符</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd">String.prototype.padEnd()</a></td><td>将当前的字符串按照指定的字符在字符串结束位置填充到指定的位数，返回填充后的字符串</td><td>传入位数、填充字符</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split">String.prototype.split()</a></td><td>把当前字符串按照某个字符串分割成一个字符串数组返回</td><td>传入分隔符</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">String.prototype.substring()</a></td><td>返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集</td><td>传入开始字符、结束字符</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Trim">String.prototype.trim()</a></td><td>从字符串的两端删除空白字符，返回新字符串</td><td>无参数</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart">String.prototype.trimStart()</a></td><td>从字符串的开头删除空白字符，返回新字符串</td><td>无参数</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">String.prototype.trimEnd()</a></td><td>从字符串的末端删除空白字符，返回新字符串</td><td>无参数</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">String.prototype.toUpperCase()</a></td><td>将调用该方法的字符串转为大写形式并返回</td><td>无参数</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">String.prototype.toLowerCase()</a></td><td>将调用该方法的字符串转为小写形式并返回</td><td>无参数</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace()</a></td><td>替换字符串中的第一个对应字符为新字符</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replaceall">String.prototype.replaceAll()</a></td><td>替换字符串中的所有对应字符为新字符</td><td></td></tr></tbody></table><h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math</a></p><table><thead><tr><th>API</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI">Math.PI</a></td><td>得到圆周率π</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/abs">Math.abs()</a></td><td>求某个数绝对值</td><td>传入一个数</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">Math.ceil()</a></td><td>向上取整</td><td>传入一个数</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></td><td>向下取整</td><td>传入一个数</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/max">Math.max()</a></td><td>求一个数列中的最大值</td><td>把数列依次传入</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min()</a></td><td>求一个数列中的最小值</td><td>把数列依次传入</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a></td><td>得到一个0-1之间的随机小数</td><td>无参；无法取到1</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round()</a></td><td>返回四舍五入的结果</td><td>传入一个数</td></tr></tbody></table><h2 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h2><h3 id="时间基础知识"><a href="#时间基础知识" class="headerlink" title="时间基础知识"></a>时间基础知识</h3><h4 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h4><table><thead><tr><th>单位</th><th>名称</th><th>换算</th></tr></thead><tbody><tr><td>hour</td><td>小时</td><td>1 day &#x3D; 24 hours</td></tr><tr><td>minute</td><td>分钟</td><td>1 hour &#x3D; 60 minutes</td></tr><tr><td>second</td><td>秒</td><td>1 minute &#x3D; 60 seconds</td></tr><tr><td>millisecond （ms）</td><td>毫秒</td><td>1 second &#x3D; 1000 ms</td></tr><tr><td>nanosecond （ns）</td><td>纳秒</td><td>1 ms &#x3D; 1000 ns</td></tr></tbody></table><h4 id="GMT和UTC"><a href="#GMT和UTC" class="headerlink" title="GMT和UTC"></a>GMT和UTC</h4><p>世界划分为24个时区，北京在东8区，格林威治在0时区。</p><img src="./assets/Js基础(六)-标准库/2019-07-02-11-14-46.png" alt="2019-07-02-11-14-46" style="zoom:50%;" /><p><strong>GMT</strong>：Greenwish Mean Time 格林威治世界时。太阳时，精确到毫秒。</p><p><strong>UTC</strong>：Universal Time Coodinated 世界协调时。以原子时间为计时标准，精确到纳秒。</p><blockquote><p>国际标准中，已全面使用UTC时间，而不再使用GMT时间，但是由于历史习惯问题，仍然将UTC写作GMT</p></blockquote><p>GMT和UTC时间在文本表示格式上是一致的，均为<code>星期缩写, 日期 月份 年份 时间 GMT</code>，例如：</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Thu</span>, <span class="number">27</span> Aug <span class="number">2020</span> <span class="number">08</span>:<span class="number">01</span>:<span class="number">44</span> GMT</span><br></pre></td></tr></table></figure><p>另外，ISO 8601标准规定，建议使用以下方式表示时间：</p><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">YYYY</span>-<span class="variable constant_">MM</span>-<span class="variable constant_">DDTHH</span><span class="symbol">:mm</span><span class="symbol">:ss</span>.msZ</span><br><span class="line">例如：</span><br><span class="line"><span class="number">2020</span>-08-27<span class="symbol">T08:</span><span class="number">01</span><span class="symbol">:</span><span class="number">44</span>.000Z</span><br></pre></td></tr></table></figure><p><strong>GMT、UTC、ISO 8601都表示的是零时区的时间</strong></p><h4 id="Unix-时间戳"><a href="#Unix-时间戳" class="headerlink" title="Unix 时间戳"></a>Unix 时间戳</h4><blockquote><p>Unix 时间戳（Unix Timestamp）是Unix系统最早提出的概念</p></blockquote><p>它将UTC时间1970年1月1日凌晨作为起始时间，到指定时间经过的秒数（毫秒数）</p><h4 id="程序中的时间处理"><a href="#程序中的时间处理" class="headerlink" title="程序中的时间处理"></a>程序中的时间处理</h4><p><strong>程序对时间的计算、存储务必使用UTC时间，或者时间戳</strong></p><p><strong>在和用户交互时，将UTC时间或时间戳转换为更加友好的文本</strong></p><img src="./assets/Js基础(六)-标准库/20200827163636.png" alt="img" style="zoom:50%;" /><h3 id="日期API"><a href="#日期API" class="headerlink" title="日期API"></a>日期API</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date</a></p><p>构造函数：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(); <span class="comment">// 得到一个当前日期对象</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(value); <span class="comment">// 根据时间戳得到一个日期对象</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(dateString); <span class="comment">// 根据一个标准日期字符串得到一个日期对象</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Date</span>(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]]]]]); <span class="comment">// 根据年、月、日、小时、分钟、秒、毫秒得到一个日期对象</span></span><br></pre></td></tr></table></figure><table><thead><tr><th>API</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></td><td>得到当前时间戳</td><td>无参</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear">Date.prototype.getFullYear()</a></td><td>得到年</td><td>无参；本地时间；</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth">Date.prototype.getMonth()</a></td><td>得到月</td><td>无参；本地时间；范围0-11</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate">Date.prototype.getDate()</a></td><td>得到日</td><td>无参；本地时间；</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours">Date.prototype.getHours()</a></td><td>得到小时</td><td>无参；本地时间；</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes">Date.prototype.getMinutes()</a></td><td>得到分钟</td><td>无参；本地时间；</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds">Date.prototype.getSeconds()</a></td><td>得到秒</td><td>无参；本地时间；</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds">Date.prototype.getMilliseconds()</a></td><td>得到毫秒</td><td>无参；本地时间；</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString">Date.prototype.toLocaleString()</a></td><td>得到日期本地的表示方式</td><td></td></tr></tbody></table><h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object</a></p><table><thead><tr><th>API</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign()</a></td><td>将多个对象的属性混合到一起</td><td>后面覆盖前面</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf()</a></td><td>获取一个对象的隐式原型</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf">Object.setPrototypeOf()</a></td><td>设置一个对象的隐式原型</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></td><td>创建一个新对象，同时设置新对象的隐式原型</td><td></td></tr></tbody></table><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array</a></p><table><thead><tr><th>API</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat">Array.prototype.concat()</a></td><td>把多个数组拼接成一个</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Array.prototype.includes()</a></td><td>判断数组中是否包含某个值</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">Array.prototype.indexOf()</a></td><td>得到数组中某个值的第一个下标</td><td>若不存在则返回-1</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf">Array.prototype.lastIndexOf()</a></td><td>得到数组中某个值的最后一个下标</td><td>若不存在则返回-1</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.prototype.join()</a></td><td>把数组中每一项使用某个字符连接起来，形成一个字符串返回</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array.prototype.push()</a></td><td>向数组的末尾添加一项</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift">Array.prototype.unshift()</a></td><td>向数组的开头添加一项</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">Array.prototype.pop()</a></td><td>删除数组最后一项</td><td>返回被删除的值</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift">Array.prototype.shift()</a></td><td>删除数组第一项</td><td>返回被删除的值</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Array.prototype.splice()</a></td><td>删除、修改、插入任何位置的值</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">Array.prototype.reverse()</a></td><td>将数组中的元素顺序颠倒</td><td></td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Array.prototype.sort()</a></td><td>对数组进行排序</td><td>传入比较函数：0-位置不变，&lt;0-前者在前，&gt;0-前者在后</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice()</a></td><td>对数组进行切割</td><td></td></tr></tbody></table><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function</a></p><table><thead><tr><th>API</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">Function.prototype.apply()</a></td><td>执行函数，绑定this</td><td>参数列表以数组的形式传递</td></tr><tr><td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call">Function.prototype.call()</a></td><td>执行函数，绑定this</td><td>参数列表依次传递</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Js基础(二)-数据和数据类型</title>
+      <link href="/posts/59df9dcb/"/>
+      <url>/posts/59df9dcb/</url>
+      
+        <content type="html"><![CDATA[<h1 id="这是啥"><a href="#这是啥" class="headerlink" title="这是啥"></a>这是啥</h1><img src="./assets/Js基础(五)-this/20211213054951.png" alt="image-20211213054946368"  /><p>不同的场景，<strong>这</strong> 指代的含义不同，JS中的<strong>this</strong>关键字也是如此：</p><p>在全局代码中使用this，指代全局对象</p><blockquote><p>在真实的开发中，很少在全局代码使用this</p></blockquote><p><strong>函数中使用this，它的指向完全取决于函数是如何被调用的</strong></p><table><thead><tr><th>调用方式</th><th>示例</th><th>函数中的this指向</th></tr></thead><tbody><tr><td><strong>通过new调用</strong></td><td><code>new method()</code></td><td>新对象</td></tr><tr><td><strong>直接调用</strong></td><td><code>method()</code></td><td>全局对象</td></tr><tr><td><strong>通过对象调用</strong></td><td><code>obj.method()</code></td><td>前面的对象</td></tr><tr><td><strong>call</strong></td><td><code>method.call(ctx)</code></td><td>call的第一个参数</td></tr><tr><td><strong>apply</strong></td><td><code>method.apply(ctx)</code></td><td>apply的第一个参数</td></tr><tr><td></td><td></td><td></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Js基础(四)-原型链</title>
+      <link href="/posts/de19637c/"/>
+      <url>/posts/de19637c/</url>
+      
+        <content type="html"><![CDATA[<h1 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h1><h2 id="原型要解决的问题"><a href="#原型要解决的问题" class="headerlink" title="原型要解决的问题"></a>原型要解决的问题</h2><img src="./assets/Js基础(四)-原型链/20211210142340.png" alt="image-20211210142340406" style="zoom:50%;" /><p>上图中，通过构造函数可以创建一个用户对象</p><p>这种做法有一个严重的缺陷，就是每个用户对象中都拥有一个<code>sayHi</code>方法，对于每个用户而言，<code>sayHi</code>方法是完全一样的，没必要为每个用户单独生成一个。</p><p>要解决这个问题，必须学习原型</p><h2 id="原型是如何解决的"><a href="#原型是如何解决的" class="headerlink" title="原型是如何解决的"></a>原型是如何解决的</h2><img src="./assets/Js基础(四)-原型链/20211210141850.png" alt="image-20211210141850465" style="zoom:50%;" /><ol><li><p><strong>原型</strong></p><p>每个函数都会自动附带一个属性<code>prototype</code>，这个属性的值是一个普通对象，称之为原型对象</p></li><li><p><strong>实例</strong></p><p>instance，通过<code>new</code>产生的对象称之为实例。</p><blockquote><p>由于JS中所有对象都是通过<code>new</code>产生的，因此，严格来说，JS中所有对象都称之为实例</p></blockquote></li><li><p><strong>隐式原型</strong></p><p>每个实例都拥有一个特殊的属性<code>__proto__</code>，称之为隐式原型，它指向构造函数的原型</p></li></ol><p>这一切有何意义？</p><p><strong>当访问实例成员时，先找自身，如果不存在，会自动从隐式原型中寻找</strong></p><p><strong>这样一来，我们可以把那些公共成员，放到函数的原型中，即可被所有实例共享</strong></p><img src="./assets/Js基础(四)-原型链/20211210143328.png" alt="image-20211210143328533" style="zoom:50%;" /><h1 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h1><h2 id="什么是原型链"><a href="#什么是原型链" class="headerlink" title="什么是原型链"></a>什么是原型链</h2><p><strong>所有的对象都是通过<code>new 函数</code>的方式创建的</strong></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> u1 = <span class="keyword">new</span> <span class="title class_">User</span>(<span class="string">&#x27;邓&#x27;</span>, <span class="string">&#x27;旭明&#x27;</span>); <span class="comment">// 对象 u1 通过 new User 创建</span></span><br><span class="line"><span class="keyword">var</span> u2 = &#123; <span class="comment">// 对象 u2 通过 new Object 创建</span></span><br><span class="line">  <span class="attr">firstName</span>: <span class="string">&#x27;莫&#x27;</span>,</span><br><span class="line">  <span class="attr">lastName</span>: <span class="string">&#x27;妮卡&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 等效于</span></span><br><span class="line"><span class="keyword">var</span> u2 = <span class="keyword">new</span> <span class="title class_">Object</span>(); </span><br><span class="line">u2.<span class="property">firstName</span> = <span class="string">&#x27;莫&#x27;</span>;</span><br><span class="line">u2.<span class="property">lastName</span> = <span class="string">&#x27;妮卡&#x27;</span>;</span><br></pre></td></tr></table></figure><p>上面的代码形成的原型图如下</p><p><img src="/./assets/Js%E5%9F%BA%E7%A1%80(%E5%9B%9B)-%E5%8E%9F%E5%9E%8B%E9%93%BE/20210903081220.png" alt="image-20210903081220607"></p><p>原型对象本身也是一个对象，默认情况下，是通过<code>new Object</code>创建的，因此，上面的两幅原型图是可以发生关联的</p><img src="./assets/Js基础(四)-原型链/20210903082540.png" alt="image-20210903082540379" style="zoom:50%;" /><blockquote><p><code>Object.prototype.__proto__</code>比较特殊，它固定指向null</p></blockquote><p>可以看出，u1的隐式原型形成了一个链条，称之为<strong>原型链</strong></p><p>当读取对象成员时，会先看对象自身是否有该成员，如果没有，就依次在其原型链上查找</p><h2 id="完整的链条"><a href="#完整的链条" class="headerlink" title="完整的链条"></a>完整的链条</h2><p><img src="/./assets/Js%E5%9F%BA%E7%A1%80(%E5%9B%9B)-%E5%8E%9F%E5%9E%8B%E9%93%BE/20210903152359.png" alt="image-20210903152359095"></p><h2 id="对开发的影响"><a href="#对开发的影响" class="headerlink" title="对开发的影响"></a>对开发的影响</h2><h3 id="在原型上更改会产生多大影响"><a href="#在原型上更改会产生多大影响" class="headerlink" title="在原型上更改会产生多大影响"></a>在原型上更改会产生多大影响</h3><p>更改构造函数的原型会对所有原型链上有该构造函数的原型的对象产生影响</p><h3 id="学会利用原型链判断类型"><a href="#学会利用原型链判断类型" class="headerlink" title="学会利用原型链判断类型"></a>学会利用原型链判断类型</h3><ol><li><p><code>instanceof</code>关键字【常用】</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">object <span class="keyword">instanceof</span> constructor</span><br><span class="line"><span class="comment">// 判断object的原型链中，是否存在constructor的原型</span></span><br></pre></td></tr></table></figure></li><li><p><code>Object.getPrototypeOf()</code>【不常用】</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">getPrototypeOf</span>(object);</span><br><span class="line"><span class="comment">// 返回object的隐式原型</span></span><br></pre></td></tr></table></figure></li></ol><h3 id="学会创建空原型的对象"><a href="#学会创建空原型的对象" class="headerlink" title="学会创建空原型的对象"></a>学会创建空原型的对象</h3><ol><li><p>利用<code>Object.create()</code></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">create</span>(target);</span><br><span class="line"><span class="comment">// 返回一个新对象，新对象以target作为隐式原型</span></span><br></pre></td></tr></table></figure></li><li><p>利用<code>Object.setPrototypeOf()</code></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">setPrototypeOf</span>(obj, prototype);</span><br><span class="line"><span class="comment">// 设置obj的隐式原型为prototype</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Js基础(三)-作用域与全局对象</title>
+      <link href="/posts/9b62bc44/"/>
+      <url>/posts/9b62bc44/</url>
+      
+        <content type="html"><![CDATA[<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p>作用域是指一个变量或者一个函数所能够产生作用的范围</p><ul><li>内部的作用域能访问外部，反之不行。访问时从内向外依次查找。</li><li>如果在内部的作用域中访问了外部，则会产生闭包。</li><li>内部作用域能访问的外部，取决于函数定义的位置，和调用无关</li></ul><p>Js只有两种作用域：全局作用域和函数作用域</p><p>Js没有块级作用域，即if或者for的花括号内包裹的内容，并不是一种作用域</p><p>在ES6标准后，使用let和const在块级代码声明的变量只能作用于块级作用域，使用var在块级代码中声明的变量仍是全局作用域的</p><h2 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h2><p>平时写的变量，没有用花括号包裹的，都是全局作用域的，写在函数花括号内的函数体是函数作用域的</p><h2 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h2><p>作用域内使用var定义的变量、函数声明会提升到作用域顶部</p><h1 id="全局对象"><a href="#全局对象" class="headerlink" title="全局对象"></a>全局对象</h1><p>无论是浏览器环境，还是node环境，都会提供一个全局对象</p><ul><li>浏览器环境：window</li><li>node环境：global</li></ul><p>全局对象有下面几个特点：</p><ul><li><p>全局对象的属性可以被直接访问</p></li><li><p>给未声明的变量赋值，实际就是给全局对象的属性赋值</p><blockquote><p>永远别这么干</p></blockquote></li><li><p>所有的全局变量、全局函数都会附加到全局对象</p><blockquote><p>这称之为全局污染，又称之为全局暴露，或简称污染、暴露</p><p>如果要避免污染，需要使用<strong>立即执行函数</strong>改变其作用域</p><p>立即执行函数又称之为IIFE，它的全称是Immediately Invoked Function Expression</p><p><strong>IIFE通常用于强行改变作用域</strong></p></blockquote></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>key=”Math.random()“问题处理</title>
       <link href="/posts/3a983c7a/"/>
       <url>/posts/3a983c7a/</url>
@@ -1011,6 +1095,31 @@
     
     
     <entry>
+      <title>Js基础(二)-数据和数据类型</title>
+      <link href="/posts/59df9dcb/"/>
+      <url>/posts/59df9dcb/</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据和数据类型"><a href="#数据和数据类型" class="headerlink" title="数据和数据类型"></a>数据和数据类型</h1><p>数据：有用的信息</p><p>数据类型：数据的分类</p><h1 id="原始类型-基本类型"><a href="#原始类型-基本类型" class="headerlink" title="原始类型(基本类型)"></a>原始类型(基本类型)</h1><p>原始类型指不可再细分的类型</p><h2 id="数字类型-number"><a href="#数字类型-number" class="headerlink" title="数字类型 number"></a>数字类型 number</h2><p>直接书写即可</p><p>数字类型可以加上前缀，来表示不同的进制</p><p>0：表示8进制<br>0x：表示16进制<br>0b：表示2进制</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = <span class="number">0xAE</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c = <span class="number">0b01</span>;</span><br></pre></td></tr></table></figure><h2 id="字符串类型-string"><a href="#字符串类型-string" class="headerlink" title="字符串类型 string"></a>字符串类型 string</h2><p>字符串：一长串文本（0个或多个）</p><ul><li>单引号 ‘</li><li>双引号 “</li><li>飘，&#96;，叫做模板字符串</li></ul><p>在字符串中，如果表示一个特殊字符，可以使用转义符（\）</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;Hello, JavaScript&#x27;</span></span><br></pre></td></tr></table></figure><h2 id="布尔类型-boolean"><a href="#布尔类型-boolean" class="headerlink" title="布尔类型 boolean"></a>布尔类型 boolean</h2><p>布尔类型用于表达真或假两种状态</p><ul><li>true，表示真</li><li>false，表示假</li></ul><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a <span class="operator">=</span> false<span class="comment">;</span></span><br></pre></td></tr></table></figure><h2 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h2><p>表示未定义，不存在。</p><p>只有一种数据书写方式：undefined</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当没有给一个变量设置默认值时，它的值就是undefined</span></span><br><span class="line"><span class="keyword">var</span> a;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">undefined</span>;</span><br></pre></td></tr></table></figure><h2 id="null"><a href="#null" class="headerlink" title="null"></a>null</h2><p>表示空，不存在。</p><p>只有一种数据书写方式：null</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="literal">null</span>;</span><br></pre></td></tr></table></figure><h1 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h1><p><strong>原始类型的变量，存放的具体的值</strong></p><p><strong>引用类型的变量，存放的是内存地址</strong></p><p><strong>凡是出现对象字面量的位置，都一定在内存出现一个新的对象</strong></p><p>引用类型有两种：</p><h2 id="对象-object"><a href="#对象-object" class="headerlink" title="对象 object"></a>对象 object</h2><p>可以认为，对象，是由多个基本类型组合而成。</p><p><strong>属性</strong>：对象的成员</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;</span><br><span class="line"><span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line"><span class="attr">b</span>: <span class="string">&#x27;b&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>重复代码：让程序难以维护</p><p>函数主要用于减少重复代码</p><h3 id="创建（定义、声明）函数"><a href="#创建（定义、声明）函数" class="headerlink" title="创建（定义、声明）函数"></a>创建（定义、声明）函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> 函数名()&#123;</span><br><span class="line">    <span class="comment">// 函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>函数体的代码不会直接运行，必须要手动调用函数，才能运行其中的代码。</p><h3 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h3><p>运行函数体</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">函数名();</span><br></pre></td></tr></table></figure><h3 id="函数提升"><a href="#函数提升" class="headerlink" title="函数提升"></a>函数提升</h3><p>通过字面量声明的函数，会提升到脚本块的顶部。</p><p>通过字面量声明的函数，会成为全局对象的属性。</p><h3 id="其他特点"><a href="#其他特点" class="headerlink" title="其他特点"></a>其他特点</h3><p>通过typeof 函数名，得到的结果是”function”</p><p>函数内部声明的变量：</p><ol><li>如果不使用var声明，和全局变量一致，表示给全局对象添加属性</li><li>如果使用var声明，变量提升到所在函数的顶部，函数外部不可以使用该变量</li></ol><p><strong>函数中声明的变量，仅能在函数中使用，在外部无效</strong></p><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>参数表示函数运行的未知条件，需要调用者告知的数据</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 参数的有效返回在函数体中</span></span><br><span class="line"><span class="keyword">function</span> 函数名(形参<span class="number">1</span>, 形参<span class="number">2</span>, ...)&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">函数名(实参)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>如果实参没有传递，则对应的形参为undefined</p><h1 id="得到数据的类型"><a href="#得到数据的类型" class="headerlink" title="得到数据的类型"></a>得到数据的类型</h1><p>在数据前加上 typeof </p><blockquote><p>js的bug（特征）： typeof null，得到的是object</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo启动失败问题处理</title>
       <link href="/posts/3d513d05/"/>
       <url>/posts/3d513d05/</url>
@@ -1028,6 +1137,31 @@
         <tags>
             
             <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Js基础(一)-什么是JavaScript</title>
+      <link href="/posts/6818cd3c/"/>
+      <url>/posts/6818cd3c/</url>
+      
+        <content type="html"><![CDATA[<h1 id="JS语言概述"><a href="#JS语言概述" class="headerlink" title="JS语言概述"></a>JS语言概述</h1><h2 id="JS语言简史"><a href="#JS语言简史" class="headerlink" title="JS语言简史"></a>JS语言简史</h2><p><strong>JS语言的起源</strong></p><p>网景（Netscape Communication Corperation），1994年，推出第一款商用浏览器，网景浏览器（Netscape Navigator）</p><p>1995年，网景公司决定在浏览器中加入一门语言，可以作交互效果，提高用户体验。</p><p>最终决定独立开发一门新的语言，聘请Brendan Eich，10天后，新的语言诞生</p><p>LiveScript -&gt; JavaScript (JS)</p><p><strong>JS语言之父：Brendan Eich</strong></p><p><strong>第一次浏览器大战</strong></p><p>网景公司打算在浏览器中加入网络操作系统，影响到微软的利益，引起了微软的注意</p><p>1995年，微软发布IE浏览器。</p><p>JS语言推出之后，网景获得极大的竞争优势。</p><p>微软对JS语言反编译，借鉴JS语言，退出了JScript、VBScript</p><p>第一次浏览器大战是标准之争</p><p>1997，网景公司将javascript1.1版本提交给ECMA（欧洲计算机制造协会）</p><p>IE3发布，并绑定windows操作系统。</p><p>1998年，网景公司，被收购。</p><p><strong>ECMA收录了JavaScript，并提交给ISO，经过修改，成为了第一个JS的标准版本，成为ECMAScript，简称ES</strong></p><p><strong>第二次浏览器大战</strong></p><p>IE4、IE5、IE6（windows xp）</p><p>微软决定解散浏览器团队。</p><p>Brendan Eich，带领团队成立Mozilla基金会，并决定，将网景浏览器开源。</p><p>长时间内，世界的技术爱好者，对网景浏览器，进行维护和打补丁</p><p>2002，Mozilla推出firefox浏览器。</p><p>2008，谷歌推出chrome浏览器，苹果推出safari，ASA公司推出opera</p><p>chrome浏览器搭载JS执行引擎V8（V8引擎，可以将JS代码直接转换为字节码，理论上，JS代码的执行速度已经接近汇编语言）</p><p>于是，JS具备了编写大型应用程序的能力，甚至服务器应用</p><blockquote><p>Ryan Dahl 准备写一个服务器端的框架，直接利用V8引擎完成了该框架，该框架，称为nodejs</p></blockquote><p><strong>V8，将JS的执行推向了一个新的台阶</strong></p><ol start="4"><li>ES标准的发展</li></ol><p>ES1，1997年<br>ES2，1998年<br>ES3，1999年<br>ES5，2009年，习惯上，不再区分 javascript （JS） 和 ECMAScript （ES）<br>ES6，2015年，ECMA宣布，从ES6开始，使用年号作为版本号，ES6的真正称呼为：ES2015<br>ES7，2016年，ES2016</p><p><strong>非常重要：ES制定语言标准，不涉及语言的运行环境。正是因为ES避免了运行环境，就让ES有机会在各种环境中执行。ES称为了通用编程语言</strong></p><p><strong>本课程学习的是，ES的通用语法、浏览器环境为其注入的新功能</strong></p><p><strong>通常，把ES运行的环境称之为，宿主环境</strong></p><h2 id="JS语言特性"><a href="#JS语言特性" class="headerlink" title="JS语言特性"></a>JS语言特性</h2><ul><li>解释型语言</li></ul><p>编译型语言：C语言、C++、java语言、C#语言</p><p>编译型语言会经过一个翻译的过程，负责翻译的叫做编译器，翻译的结果，叫做编译结果。</p><p>优点：执行速度快<br>缺点：某个编译结果，难以适用于各种环境（跨平台障碍）；部署繁琐；</p><p>解释型语言：js、php</p><p>解释型语言没有编译结果</p><p>优点：跨平台；部署简单；<br>缺点：执行速度稍慢  </p><ul><li>弱类型语言</li></ul><p>弱类型：存放的数据类型可变。优点：灵活、易上手； 缺点：不严谨</p><p>强类型：存放的数据类型不可变。优点：严谨；缺点：不灵活、不易上手</p><blockquote><p>通常，将弱类型的解释型语言，称为脚本语言</p></blockquote><ul><li>单线程</li></ul><p>同步现象：上一件事情没有做完，下一件事情必须等待。</p><ul><li>异步</li></ul><p>提高单线程的执行效率。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
             
         </tags>
       
