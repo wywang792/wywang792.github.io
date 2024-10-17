@@ -52,7 +52,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-09-19 16:08:31'
+  postUpdate: '2024-10-18 01:49:25'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -150,146 +150,264 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/./img/index_top_img.png')"><nav id="nav"><span id="blog-info"><a href="/" title="小王编程进阶"><span class="site-name">小王编程进阶</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">小王编程进阶</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/368e27d4/" title="websocket网络通信">websocket网络通信</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-10T16:00:00.000Z" title="发表于 2024-03-11 00:00:00">2024-03-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/">网络通信</a></span></div><div class="content">一、定义handle​      以下的handle只是做简单演示，可以根据需要做更多功能的扩展，比如根据session的具体属性，接收指定session的信息，给指定的session发送信息等等。
-12345678910111213141516171819202122232425262728293031323334353637383940import org.springframework.web.socket.CloseStatus;import org.springframework.web.socket.TextMessage;import org.springframework.web.socket.WebSocketSession;import org.springframework.web.socket.handler.TextWebSocketHandler;import java.io.IOException;import java.util.ArrayList;import java.util.List;public class MyWebSocketHandler ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/4a0d6d40/" title="socket网络通信">socket网络通信</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-09T16:00:00.000Z" title="发表于 2024-03-10 00:00:00">2024-03-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/">网络通信</a></span></div><div class="content">Socket通信的两种方式一、TCP协议通信12345678910111213141516171819try &#123;    // 创建一个Socket对象，指定目标IP地址和端口号    Socket socket = new Socket(&quot;127.0.0.1&quot;, 18080);    // 获取输出流    OutputStream outputStream = socket.getOutputStream();        // 准备要发送的数据    String message = &quot;Hello world!&quot;;    byte[] sendData = message.getBytes();        // 发送数据    outputStream.write(sendData);    outputStream.flush();        // 关闭Socket连接    socket.close();&#125; catch (Exception e) &#123;	e.printStackTrace();&#12 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/2c289212/" title="前端进阶之浏览器是如何渲染页面的">前端进阶之浏览器是如何渲染页面的</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T19:00:00.000Z" title="发表于 2023-12-23 03:00:00">2023-12-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">浏览器是如何渲染页面的？当浏览器的网络线程收到 HTML 文档后，会产生一个渲染任务，并将其传递给渲染主线程的消息队列。
-在事件循环机制的作用下，渲染主线程取出消息队列中的渲染任务，开启渲染流程。
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">67</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/./img/index_top_img.png')"><nav id="nav"><span id="blog-info"><a href="/" title="小王编程进阶"><span class="site-name">小王编程进阶</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">小王编程进阶</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/c31b0edc/" title="加密">加密</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-31T16:00:00.000Z" title="发表于 2024-06-01 00:00:00">2024-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span></div><div class="content">加密算法的分类对称加密
 
-整个渲染流程分为多个阶段，分别是： HTML 解析、样式计算、布局、分层、绘制、分块、光栅化、画
-每个阶段都有明确的输入输出，上一个阶段的输出会成为下一个阶段的输入。
-这样，整个渲染流程就形成了一套组织严密的生产流水线。
+常见算法：DES、3DES、TDEA、Blowfish、RC5、IDEA
+优点：加密、解密速度快，适合对大数据量进行加密
+缺点：在网络中需要分发密钥，增加了密钥被窃取的风险
+非对称加密
 
-渲染的第一步是解析 HTML。
-解析过程中遇到 CSS 解析 CSS，遇到 JS 执行 JS。为了提高解析效率，浏览器在开始解析前，会启动一个预解析的线程，率先下载 HTML 中的外部 CSS 文件和 外部的 JS 文件。
-如果主线程解析到link位置，此时外部的 CSS 文件还没有下载解析好，主线程不会等待，继续解析后续的 HTML。这是因为下载和解析 CSS 的工作是在预解析线程中进行的。这就是 CSS 不会阻塞 HTML 解析的根本原因。
-如果主线程解析到script位置，会停止解析 HTML，转而等待 JS 文件下载好，并将全局代码解析执行完成后，才能继续解析  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/7e17d776/" title="前端进阶之你不知道的CSS之包含块">前端进阶之你不知道的CSS之包含块</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T17:00:00.000Z" title="发表于 2023-12-23 01:00:00">2023-12-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">你不知道的 CSS 之包含块一说到 CSS 盒模型，这是很多小伙伴耳熟能详的知识，甚至有的小伙伴还能说出 border-box 和 content-box 这两种盒模型的区别。
-但是一说到 CSS 包含块，有的小伙伴就懵圈了，什么是包含块？好像从来没有听说过这玩意儿。
+常见算法：RSA、Rabin、DSA、ECC、Elgamal、D-H
+优点：安全（私钥仅被一方保存，不用于网络传输）
+缺点：仅能一方进行解密
+摘要&#x2F;哈希&#x2F;散列
 
+常见算法：MD4、MD5、SHA1
+优点：密文占用空间小（定长的短字符串）；难以被破解
+缺点：无法解密
+面试题对称加密，非对称加密，摘要的概念，请解释一下
 
-好吧，如果你对包含块的知识一无所知，那么系好安全带，咱们准备出发了。
+参考答案：
+密钥
+密钥是一种参数，它是在明文转换为密文或将密文转换为明文的算法中输入的参数。密钥分为对称密钥与非对称密钥，分别应用在对称加密和非对称加密上。
+对称加密
+对称加密又叫做私钥加密，即信息的发送方和接收方使用同一个密钥去加密和解密数据。对称加密的特点是算法公开、加密和解密速度快，适合于对大数据量进行加密，常见的对称加密算法有 DES、3DES、TDEA、Blowfish、RC5 和 IDEA。
+非对称加密
+非对称加密也叫做公钥加密。 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/bb1a58b6/" title="VueRouter的两种模式">VueRouter的两种模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-24T16:00:00.000Z" title="发表于 2024-04-25 00:00:00">2024-04-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">Vue Router 提供了两种主要的路由模式：hash 模式和 history 模式。它们的主要区别在于浏览器地址栏 URL 的处理方式，影响路由实现的原理以及页面的加载和刷新行为。下面详细说明它们的区别、优缺点以及实现原理。
+hash 模式实现原理：
+hash 模式使用的是 URL 的哈希值（#号后面的部分）来模拟不同的路径，而无需向服务器发出请求。
+哈希值在浏览器中被称为“片段标识符”（Fragment Identifier），用于指定页面中的某个位置。它的一个特性是：改变哈希部分不会触发页面的重新加载。
 
+URL 示例：1http://example.com/#/home
 
-包含块英语全称为containing block，实际上平时你在书写 CSS 时，大多数情况下你是感受不到它的存在，因此你不知道这个知识点也是一件很正常的事情。但是这玩意儿是确确实实存在的，在 CSS 规范中也是明确书写了的：
-https://drafts.csswg.org/css2/#containing-block-details
-
-
-并且，如果你不了解它的运作机制，有时就会出现一些你认为的莫名其妙的现象。
-那么，这个包含块究竟说了什么内容呢？
-说起来也简单，就是元素的尺寸和位置，会受它的包含块所影响。对于一些属性，例如 width, height, padding, margin，绝对定位元素的偏移值（比如 position 被设置为  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/4171ab52/" title="前端进阶之CSS属性计算过程">前端进阶之CSS属性计算过程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T16:00:00.000Z" title="发表于 2023-12-23 00:00:00">2023-12-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">CSS 属性计算过程你是否了解 CSS 的属性计算过程呢？
-有的同学可能会讲，CSS属性我倒是知道，例如：
-123p&#123;  color : red;&#125;
-
-上面的 CSS 代码中，p 是元素选择器，color 就是其中的一个 CSS 属性。
-但是要说 CSS 属性的计算过程，还真的不是很清楚。
-没关系，通过此篇文章，能够让你彻底明白什么是 CSS 属性的计算流程。
-
-
-首先，不知道你有没有考虑过这样的一个问题，假设在 HTML 中有这么一段代码：
-123&lt;body&gt;  &lt;h1&gt;这是一个h1标题&lt;/h1&gt;&lt;/body&gt;
-
-上面的代码也非常简单，就是在 body 中有一个 h1 标题而已，该 h1 标题呈现出来的外观是如下：
+这里的 #/home 是哈希部分，浏览器只会处理 # 之前的部分，也就是 http://example.com，不会向服务器发送 /home 请求。
+优点：
+简单易用：不用配置服务器，默认情况下，hash 模式能兼容所有浏览器，适合开发阶段或对 SEO 要求不高的项目。
+不会导致页面刷新：改变哈希值时，浏览器不会发出 HTTP 请求，不会触发页面重新加载。
+兼容性强：由于所有现代浏览器都支持哈希值，该模式在 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/8d17cdf0/" title="jwt">jwt</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-17T16:00:00.000Z" title="发表于 2024-04-18 00:00:00">2024-04-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">概述回顾登录的流程：
 
 
-目前我们没有设置该 h1 的任何样式，但是却能看到该 h1 有一定的默认样式，例如有默认的字体大小、默认的颜色。
-那么问题来了，我们这个 h1 元素上面除了有默认字体大小、默认颜色等属性以外，究竟还有哪些属性呢？
+接下来的问题是：这个出入证（令牌）里面到底存啥？
+一种比较简单的办法就是直接存储用户信息的JSON串，这会造成下面的几个问题：
+
+非浏览器环境，如何在令牌中记录过期时间
+如何防止令牌被伪造
+
+JWT就是为了解决这些问题出现的。
+JWT全称Json Web Token，本质就是一个字符串
+它要解决的问题，就是在互联网环境中，提供统一的、安全的令牌格式
+因此，jwt只是一个令牌格式而已，你可以把它存储到cookie，也可以存储到localstorage，没有任何限制！
+同样的，对于传输，你可以使用任何传输方式来传输jwt，一般来说，我们会使用消息头来传输它
+比如，当登录成功后，服务器可以给客户端响应一个jwt：
+1234567HTTP/1.1 200 OK...set-cookie:token=jwt令牌authentication:jwt令牌...&#123;..., token:jwt令牌&#125;
+
+可以看到，jwt令牌可以出现在响应的任何一个地方，客户端和服务器自行约定即可。
+
+当然，它也可以出现在响应的多个地方，比如为了充分利用浏览器的cookie，同 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/51aeee82/" title="TCP协议">TCP协议</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-16T16:00:00.000Z" title="发表于 2024-04-17 00:00:00">2024-04-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">
+
+TCP收发数据流程
+
+TCP如何收发数据分段发送
+
+可靠传输在TCP协议中，任何时候、任何一方都可以主动发送数据给另一方
+为了解决数据报丢失、数据报错乱等问题，TCP协议要求：接收方收到数据报后，必须对数据报进行确认！
 
 
-答案是该元素上面会有 CSS 所有的属性。你可以打开浏览器的开发者面板，选择【元素】 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/7e17d776/" title="前端进阶-之事件循环">前端进阶-之事件循环</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-21T16:00:00.000Z" title="发表于 2023-12-22 00:00:00">2023-12-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">事件循环浏览器的进程模型何为进程？程序运行需要有它自己专属的内存空间，可以把这块内存空间简单的理解为进程
+
+seq：表示这次数据报的序号
+ACK：表示这次数据报是一个确认数据报
+ack：表示期望下一次接收的数据报序号
+
+发送方如果长时间没有收到确认数据报（ACK&#x3D;1），则会判定丢失或者是错误，然后重发
+连接的建立（三次握手）TCP协议要实现数据的收发，必须要先建立连接
+连接的本质其实就是双方各自开辟的一块儿内存空间，空间中主要是数据缓冲区和一些变量
 
 
-每个应用至少有一个进程，进程之间相互独立，即使要通信，也需要双方同意。
-何为线程？有了进程后，就可以运行程序的代码了。
-运行代码的「人」称之为「线程」。
-一个进程至少有一个线程，所以在进程开启后会自动创建一个线程来运行代码，该线程称之为主线程。
-如果程序需要同时执行多块代码，主线程就会启动更多的线程来执行代码，所以一个进程中可以包含多个线程。
+连接建立的过程需要经过三次数据报传输，因此称之为三次握手
 
-浏览器有哪些进程和线程？浏览器是一个多进程多线程的应用程序
-浏览器内部工作极其复杂。
-为了避免相互影响，为了减少连环崩溃的几率，当启动浏览器后，它会自动启动多个进程。
+开始
+客户端：我说话能听见吗？
+服务器：能听见，我说话能听见吗？
+客户端：能听见
+结束
 
 
-可以在浏览器的任务管理器中查看当前的所有进程
 
-其中，最主要的进程有：
-
-浏览器进程
-主要负责界面显示、用户交互、子进程管理等。浏览器进程内部会启动多个线程处理不同的任务。
-
-网络进程
-负责加载网络资源。网络进程内部会启动多个线程来处理不同的网络任务。
-
-渲染进程（本节课重点讲解的进程）
-渲染进程启动后，会开启一个渲染主线程，主线程负责执行 HTML、CSS、JS 代 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/9bfbc455/" title="CSS工程化(八)-抽离css文件">CSS工程化(八)-抽离css文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-29T04:00:00.000Z" title="发表于 2023-09-29 12:00:00">2023-09-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/">前端工程化</a></span></div><div class="content">抽离css文件目前，css代码被css-loader转换后，交给的是style-loader进行处理。
-style-loader使用的方式是用一段js代码，将样式加入到style元素中。
-而实际的开发中，我们往往希望依赖的样式最终形成一个css文件
-此时，就需要用到一个库：mini-css-extract-plugin
-该库提供了1个plugin和1个loader
-
-plugin：负责生成css文件
-loader：负责记录要生成的css文件的内容，同时导出开启css-module后的样式对象
-
-使用方式：
-1234567891011121314151617const MiniCssExtractPlugin = require(&quot;mini-css-extract-plugin&quot;)module.exports = &#123;    module: &#123;        rules: [            &#123;                test: /\.css$/,                 use: [MiniCssExtractPlu ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/d79e90c0/" title="CSS工程化(七)-Postcss">CSS工程化(七)-Postcss</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-28T04:00:00.000Z" title="发表于 2023-09-28 12:00:00">2023-09-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/">前端工程化</a></span></div><div class="content">PostCss什么是PostCss可以看出，CSS工程化面临着诸多问题，而解决这些问题的方案多种多样。
-如果把CSS单独拎出来看，光是样式本身，就有很多事情要处理。
-既然有这么多事情要处理，何不把这些事情集中到一起统一处理呢？
-PostCss就是基于这样的理念出现的。
-PostCss类似于一个编译器，可以将样式源码编译成最终的CSS代码
-
-看上去是不是和LESS、SASS一样呢？
-但PostCss和LESS、SASS的思路不同，它其实只做一些代码分析之类的事情，将分析的结果交给插件，具体的代码转换操作是插件去完成的。
-
-官方的一张图更能说明postcss的处理流程：
+连接的销毁（四次挥手）
+开始
+客户端：我说完了，挂了？
+服务器：我明白你说完了，但别忙挂，我还有话要说。
+服务器继续说……
+服务器：我也说完了，挂了？
+客户端：好的！
+结束
 
 
-这一点有点像webpack，webpack本身仅做依赖分析、抽象语法树分析，其他的操作是靠插件和加载器完成的。
 
-官网地址：https://postcss.org/
-github地址：https://github.com/postcss/postcss
-安装PostCss是基于node编写的，因此可以使用npm安装
-1npm i -D postcss
+HTTP和TCP的关系
 
-postcss库提供了对应的js api用于转换代码，如果你想使用 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/4d32a482/" title="CSS工程化(六)-预编译器less">CSS工程化(六)-预编译器less</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-25T04:00:00.000Z" title="发表于 2023-09-25 12:00:00">2023-09-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/">前端工程化</a></span></div><div class="content">CSS预编译器基本原理编写css时，受限于css语言本身，常常难以处理一些问题：
+HTTP协议是对内容格式的规定，它使用了TCP协议 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/a1ee5b0c/" title="http缓存协议">http缓存协议</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-14T16:00:00.000Z" title="发表于 2024-04-15 00:00:00">2024-04-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">缓存的基本原理在一个C&#x2F;S结构中，最基本的缓存分为两种：
 
-重复的样式值：例如常用颜色、常用尺寸
-重复的代码段：例如绝对定位居中、清除浮动
-重复的嵌套书写
+客户端缓存
+服务器缓存
 
-由于官方迟迟不对css语言本身做出改进，一些第三方机构开始想办法来解决这些问题
-其中一种方案，便是预编译器
-预编译器的原理很简单，即使用一种更加优雅的方式来书写样式代码，通过一个编译器，将其转换为可被浏览器识别的传统css代码
+本文仅讨论客户端缓存
+所谓客户端缓存，顾名思义，是将某一次的响应结果保存在客户端（比如浏览器）中，而后续的请求仅需要从缓存中读取即可，极大的降低了服务器的处理压力。
+客户端缓存的原理如下：
 
-目前，最流行的预编译器有LESS和SASS，由于它们两者特别相似，因此仅学习一种即可
 
-less官网：http://lesscss.org/
-less中文文档1（非官方）：http://lesscss.cn/
-less中文文档2（非官方）：https://less.bootcss.com/
-sass官网：https://sass-lang.com/
-sass中文文档1（非官方）：https://www.sass.hk/
-sass中文文档2（非官方）：https://sass.bootcss.com/
+这只是一个简易的原理图，实际情况可能有差异
 
-LESS的安装和使用从原理可知，要使用LESS，必须要安装LESS编译器
-LES ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/cad6351b/" title="CSS工程化(五)-css module">CSS工程化(五)-css module</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-19T04:00:00.000Z" title="发表于 2023-09-19 12:00:00">2023-09-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/">前端工程化</a></span></div><div class="content">css module
-通过命名规范来限制类名太过死板，而css in js虽然足够灵活，但是书写不便。
-css module 开辟一种全新的思路来解决类名冲突的问题
+这里就设计到一个缓存策略的问题，这些问题包括：
 
-思路css module 遵循以下思路解决类名冲突问题：
+哪些资源需要加入到缓存，哪些不需要？
+缓存的时间是多久呢？
+如果服务器的资源有改动，客户端如何更新缓存呢？
+如果缓存过期了，可是服务器上的资源并没有发生变动，又该如何处理呢？
+…….
 
-css的类名冲突往往发生在大型项目中
-大型项目往往会使用构建工具（webpack等）搭建工程
-构建工具允许将css样式切分为更加精细的模块
-同JS的变量一样，每个css模块文件中难以出现冲突的类名，冲突的类名往往发生在不同的css模块文件中
-只需要保证构建工具在合并样式代码后不会出现类名冲突即可
+要回答这些问题，就必须要清楚http中关于缓存的协议
+理解了http的缓存协议，自然就能回答上面的问题了。
+来自服务器的缓存指令当客户端发出一个get请求到服务器，服务器可能有以下的内心活动：「你请求的这个资源，我很少会改动它，干脆你把它缓存起来吧，以后就不要来烦我了」
+为了表达这个美好的愿望，服务器在响应头中加入了以下内容：
+1234Cache-Control: max-age=3600ETag: W/&quot;121- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/7268e7d5/" title="同源策略与跨域">同源策略与跨域</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-11T16:00:00.000Z" title="发表于 2024-04-12 00:00:00">2024-04-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">渲染页面：浏览器的工作原理在浏览网页时用户希望页面的内容能够快速加载且流畅交互。因此，开发者应力争实现这两个目标。
+理解浏览器的工作原理有助于开发者了解该如何提升性能和感知性能。
+概述快速响应的网站提供更好的用户体验。用户期待内容快速加载和流畅交互的 Web 体验。
+导致 Web 性能问题的原因主要有两种，一是网络延迟，二是大部分情况下的浏览器单线程执行。
+保障页面快速加载的最大威胁是网络延迟。开发者的目标是使网站加载速度尽可能快，或者至少看起来加载速度很快，以便用户尽快获取所需信息。网络延迟是将字节传输到计算机的时间。Web 性能优化需要做的就是使页面尽可能快地加载完成。
+大部分情况下，浏览器被认为是单线程的。也就是说，它们在执行一个任务之前会从头到尾完成一个任务，然后才会接受另一个任务。为了实现流畅的交互，开发者的目标是确保网站的交互性能良好，从流畅的滚动到对触摸的响应。渲染时间非常关键，我们需要确保主线程能够完成交给它的所有工作，并且始终能够处理用户交互。通过理解浏览器的单线程特性，并尽可能和适当地减少主线程的责任，可以提高网页性能，以确保渲染流畅，并且对交互的响应是即时的。
+导 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/7268e7d5/" title="同源策略与跨域">同源策略与跨域</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-31T16:00:00.000Z" title="发表于 2024-04-01 00:00:00">2024-04-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">同源策略浏览器有一个重要的安全策略，称之为「同源策略」
+其中，$源&#x3D;协议+主机+端口$，两个源相同，称之为同源，两个源不同，称之为跨源或跨域
+比如：
 
--css module&#x2F;image-20240918011605147.png)
-实现原理在webpack中，作为处理css的css-loader，它实现了css module的思想，要启用css module，需要将css-loader的配置modules设置为true。
-css-loader的实现方式如下：
--css module&#x2F;image-20240918011620210.png)
-原理极其简单，开启了css module后，css-lo ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小王编程进阶</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/wywang792"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这里是小王编程进阶，记录自己日常工作中遇到的问题，同时也作为自己的学习笔记，欢迎关注，一起进步！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/368e27d4/" title="websocket网络通信">websocket网络通信</a><time datetime="2024-03-10T16:00:00.000Z" title="发表于 2024-03-11 00:00:00">2024-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4a0d6d40/" title="socket网络通信">socket网络通信</a><time datetime="2024-03-09T16:00:00.000Z" title="发表于 2024-03-10 00:00:00">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/2c289212/" title="前端进阶之浏览器是如何渲染页面的">前端进阶之浏览器是如何渲染页面的</a><time datetime="2023-12-22T19:00:00.000Z" title="发表于 2023-12-23 03:00:00">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/7e17d776/" title="前端进阶之你不知道的CSS之包含块">前端进阶之你不知道的CSS之包含块</a><time datetime="2023-12-22T17:00:00.000Z" title="发表于 2023-12-23 01:00:00">2023-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4171ab52/" title="前端进阶之CSS属性计算过程">前端进阶之CSS属性计算过程</a><time datetime="2023-12-22T16:00:00.000Z" title="发表于 2023-12-23 00:00:00">2023-12-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+
+
+源 1
+源 2
+是否同源
+
+
+
+http://www.baidu.com
+http://www.baidu.com/news
+✅
+
+
+https://www.baidu.com
+http://www.baidu.com
+❌
+
+
+http://localhost:5000
+http://localhost:7000
+❌
+
+
+http://localhost:5000
+http://127.0.0.1:5000
+❌
+
+
+http://www.baidu.com
+http://baidu.com
+❌
+
+
+
+
+
+
+
+同源策略是指，若页面的源和页面运行过程中加载的源不一致时，出于安全考虑，浏览器会对跨域的资源访问进行一些限制
+
+同源策略对 ajax 的跨域限制的最为凶狠，默认情况下，它不允许 ajax 访问跨域资源
+
+所以，我们通常所说的跨域问题，就是同源策略对 ajax 产生的影响
+有多种方式解决跨域问题，常见的有：
+
+代理，常用 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/36a7e6dd/" title="常见网络攻击">常见网络攻击</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-24T16:00:00.000Z" title="发表于 2024-03-25 00:00:00">2024-03-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">CSRF攻击CSRF（Cross-site request forgery，跨站请求伪造）
+它是指攻击者利用了用户的身份信息，执行了用户非本意的操作
+
+防御方式
+
+
+防御手段
+防御力
+问题
+
+
+
+不使用cookie
+⭐️⭐️⭐️⭐️⭐️
+兼容性略差ssr会遇到困难，但可解决
+
+
+使用sameSite
+⭐️⭐️⭐️⭐️
+兼容性差容易挡住自己人
+
+
+使用csrf token
+⭐️⭐️⭐️⭐️⭐️
+获取到token后未进行操作仍然会被攻击
+
+
+使用referer防护
+⭐️⭐️
+过去很常用，现在已经发现漏洞
+
+
+面试题介绍 csrf 攻击
+
+CSRF 是跨站请求伪造，是一种挟制用户在当前已登录的Web应用上执行非本意的操作的攻击方法
+它首先引导用户访问一个危险网站，当用户访问网站后，网站会发送请求到被攻击的站点，这次请求会携带用户的cookie发送，因此就利用了用户的身份信息完成攻击
+防御 CSRF 攻击有多种手段：
+
+不使用cookie
+为表单添加校验的 token 校验
+cookie中使用sameSite字段
+服务器检查 referer 字段
+
+
+XSS攻击XSS（Cross Site S ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/f4c343a3/" title="常见请求方法">常见请求方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-21T16:00:00.000Z" title="发表于 2024-03-22 00:00:00">2024-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">请求方法的本质请求方法是请求行中的第一个单词，它向服务器描述了客户端发出请求的动作类型。在 HTTP 协议中，不同的请求方法只是包含了不同的语义，但服务器和浏览器的一些约定俗成的行为造成了它们具体的区别
+
+123fetch(&#x27;https://www.baidu.com&#x27;, &#123;  method: &#x27;heiheihei&#x27;, // 告诉百度，我这次请求是来嘿嘿嘿的&#125;);
+
+上面的请求中，我们使用了自定义方法heiheihei。虽然百度服务器无法理解这样的请求是在干什么，但这样的请求也是可以正常发送到百度服务器的。
+在实践中，客户端和服务器慢慢的形成了一个共识，约定俗成的规定了一些常见的请求方法：
+
+GET，表示向服务器获取资源。业务数据在请求行中，无须请求体
+POST，表示向服务器提交信息，通常用于产生新的数据，比如注册。业务数据在请求体中
+PUT，表示希望修改服务器的数据，通常用于修改。业务数据在请求体中
+DELETE，表示希望删除服务器的数据。业务数据在请求行中，无须请求体。
+OPTIONS，发生在跨域的预检请求中，表示客户端向 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/f9d5ab3/" title="cookie与storage">cookie与storage</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-17T16:00:00.000Z" title="发表于 2024-03-18 00:00:00">2024-03-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></span></div><div class="content">Cookie出现的原因假设服务器有一个接口，通过请求这个接口，可以添加一个管理员
+但是，不是任何人都有权力做这种操作的
+那么服务器如何知道请求接口的人是有权力的呢？
+答案是：只有登录过的管理员才能做这种操作
+可问题是，客户端和服务器的传输使用的是http协议，http协议是无状态的，什么叫无状态，就是服务器不知道这一次请求的人，跟之前登录请求成功的人是不是同一个人
+
+
+由于http协议的无状态，服务器忘记了之前的所有请求，它无法确定这一次请求的客户端，就是之前登录成功的那个客户端。
+
+你可以把服务器想象成有着严重脸盲症的东哥，他没有办法分清楚跟他说话的人之前做过什么
+
+于是，服务器想了一个办法
+它按照下面的流程来认证客户端的身份
+
+客户端登录成功后，服务器会给客户端一个出入证
+后续客户端的每次请求，都必须要附带这个出入证
+
+
+服务器发扬了认证不认人的优良传统，就可以很轻松的识别身份了。
+但是，用户不可能只在一个网站登录，于是客户端会收到来自各个网站的出入证，因此，就要求客户端要有一个类似于卡包的东西，能够具备下面的功能：
+
+能够存放多个出入证。这些出入证来自不同的网站，也可能是一个网站 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#content-inner">7</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小王编程进阶</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">67</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/wywang792"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这里是小王编程进阶，记录自己日常工作中遇到的问题，同时也作为自己的学习笔记，欢迎关注，一起进步！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/c31b0edc/" title="加密">加密</a><time datetime="2024-05-31T16:00:00.000Z" title="发表于 2024-06-01 00:00:00">2024-06-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/bb1a58b6/" title="VueRouter的两种模式">VueRouter的两种模式</a><time datetime="2024-04-24T16:00:00.000Z" title="发表于 2024-04-25 00:00:00">2024-04-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/8d17cdf0/" title="jwt">jwt</a><time datetime="2024-04-17T16:00:00.000Z" title="发表于 2024-04-18 00:00:00">2024-04-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/51aeee82/" title="TCP协议">TCP协议</a><time datetime="2024-04-16T16:00:00.000Z" title="发表于 2024-04-17 00:00:00">2024-04-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/a1ee5b0c/" title="http缓存协议">http缓存协议</a><time datetime="2024-04-14T16:00:00.000Z" title="发表于 2024-04-15 00:00:00">2024-04-15</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             <a class="card-more-btn" href="/categories/" title="查看更多">
     <i class="fas fa-angle-right"></i></a>
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"><span class="card-category-list-name">前端工程化</span><span class="card-category-list-count">28</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">前端开发</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"><span class="card-category-list-name">常见问题</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="card-category-list-name">操作系统</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"><span class="card-category-list-name">版本控制</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">环境搭建</span><span class="card-category-list-count">6</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/CSS/" style="font-size: 1.39em; color: #99a4b4">CSS</a> <a href="/tags/element-ui/" style="font-size: 1.27em; color: #99a0a9">element-ui</a> <a href="/tags/fastDFS/" style="font-size: 1.1em; color: #999">fastDFS</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/java/" style="font-size: 1.21em; color: #999ea4">java</a> <a href="/tags/javascript/" style="font-size: 1.44em; color: #99a7ba">javascript</a> <a href="/tags/mongodb/" style="font-size: 1.1em; color: #999">mongodb</a> <a href="/tags/mysql/" style="font-size: 1.1em; color: #999">mysql</a> <a href="/tags/nodejs/" style="font-size: 1.16em; color: #999b9e">nodejs</a> <a href="/tags/redis/" style="font-size: 1.1em; color: #999">redis</a> <a href="/tags/socket/" style="font-size: 1.1em; color: #999">socket</a> <a href="/tags/vscode/" style="font-size: 1.1em; color: #999">vscode</a> <a href="/tags/web/" style="font-size: 1.33em; color: #99a2af">web</a> <a href="/tags/webpack/" style="font-size: 1.5em; color: #99a9bf">webpack</a> <a href="/tags/websocket/" style="font-size: 1.1em; color: #999">websocket</a> <a href="/tags/windows/" style="font-size: 1.1em; color: #999">windows</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.16em; color: #999b9e">数据库</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">12</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">56</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-02-01T04:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">54.6k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-09-19T08:08:31.220Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright"><a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2021001261号-2</a></div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E4%BB%96/"><span class="card-category-list-name">其他</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"><span class="card-category-list-name">前端工程化</span><span class="card-category-list-count">28</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">前端开发</span><span class="card-category-list-count">20</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"><span class="card-category-list-name">常见问题</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="card-category-list-name">操作系统</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"><span class="card-category-list-name">版本控制</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/CSS/" style="font-size: 1.4em; color: #99a5b6">CSS</a> <a href="/tags/VueRouter/" style="font-size: 1.1em; color: #999">VueRouter</a> <a href="/tags/element-ui/" style="font-size: 1.25em; color: #999fa7">element-ui</a> <a href="/tags/fastDFS/" style="font-size: 1.1em; color: #999">fastDFS</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/java/" style="font-size: 1.2em; color: #999da3">java</a> <a href="/tags/javascript/" style="font-size: 1.45em; color: #99a7ba">javascript</a> <a href="/tags/mongodb/" style="font-size: 1.1em; color: #999">mongodb</a> <a href="/tags/mysql/" style="font-size: 1.1em; color: #999">mysql</a> <a href="/tags/network/" style="font-size: 1.35em; color: #99a3b1">network</a> <a href="/tags/nodejs/" style="font-size: 1.15em; color: #999b9e">nodejs</a> <a href="/tags/redis/" style="font-size: 1.1em; color: #999">redis</a> <a href="/tags/socket/" style="font-size: 1.1em; color: #999">socket</a> <a href="/tags/vscode/" style="font-size: 1.1em; color: #999">vscode</a> <a href="/tags/web/" style="font-size: 1.3em; color: #99a1ac">web</a> <a href="/tags/webpack/" style="font-size: 1.5em; color: #99a9bf">webpack</a> <a href="/tags/websocket/" style="font-size: 1.1em; color: #999">websocket</a> <a href="/tags/windows/" style="font-size: 1.1em; color: #999">windows</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 1.1em; color: #999">其他</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.15em; color: #999b9e">数据库</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">12</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">67</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-02-01T04:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">77.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-10-17T17:49:25.536Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright"><a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2021001261号-2</a></div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
